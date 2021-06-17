@@ -2,7 +2,7 @@
 //  EnterInputData.swift
 //  Tomato_Automatic_Aggregation
 //
-//  Created by Terao Jumpei on 2021/06/05.
+//  Created by TeraJun on 2021/06/05.
 //
 
 import Foundation

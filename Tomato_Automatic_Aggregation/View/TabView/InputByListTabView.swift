@@ -28,9 +28,9 @@ struct InputByListTabView: View {
                         Text("\(Varieties[num].name)")
                     }
                 }.environment(\.editMode, .constant(.active))
-                .onDisappear {
-                    if (selectedVariety != nil) {
-                        EnterInputData.EnterData(Name: Varieties[selectedVariety!].name)
+                .onChange(of: selectedVariety){ value in
+                    if (value != nil) {
+                        EnterInputData.EnterData(Name: Varieties[value!].name)
                     }
                 }
                 

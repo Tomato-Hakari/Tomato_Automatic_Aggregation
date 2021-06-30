@@ -20,27 +20,43 @@ struct InputVarietyView: View {
     
     // 選択されているタブ
     @State var selectedTab = 1
+    
+    // 収量測定画面に遷移できる状態かどうか
+    @State var isVarietyDataIn = false
 
     var body: some View {
         NavigationView {
-            TabView(selection: $selectedTab){
-                InputByBarcodeReaderTabView()
-                    .tabItem {
-                        Text("バーコードリーダーで入力")
+            VStack{
+                NavigationLink(destination: InputYieldView(isPresented: $isPresented), isActive: $isVarietyDataIn){
+                    EmptyView()
+                }
+                TabView(selection: $selectedTab){
+                    InputByBarcodeReaderTabView()
+                        .tabItem {
+                            Text("バーコードリーダーで入力")
+                        }
+                        .tag(1)
+                    InputByListTabView()
+                        .tabItem {
+                            Text("一覧から入力")
+                        }
+                        .tag(2)
+                }
+                .navigationBarTitle("品種入力")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button("閉じる"){
+                            isPresented = false
+                        }
                     }
-                    .tag(1)
-                InputByListTabView()
-                    .tabItem {
-                        Text("一覧から入力")
-                    }
-                    .tag(2)
-            }
-            .navigationBarTitle("データ入力")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .toolbar{
-                ToolbarItem(placement: .navigationBarTrailing){
-                    Button("閉じる"){
-                        isPresented = false
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        
+                        Button("収量測定へ"){
+                            if !Variety.InputVarietyName.isEmpty{
+                                isVarietyDataIn = true
+                            }
+                        }
                     }
                 }
             }

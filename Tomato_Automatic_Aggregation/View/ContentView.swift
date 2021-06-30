@@ -19,8 +19,11 @@ struct ContentView: View {
                 HStack(){
                     Text("\(reloader.value)")
                     Spacer()
-                    Button("\(isShowInputView ? "入力中" : "データ入力")"){
-                       isShowInputView = true
+                    Button("リセット"){
+                        Variety.InputVarietyID = ""
+                        Variety.InputVarietyName = ""
+                        print("id:\(Variety.InputVarietyID)")
+                        print("name:\(Variety.InputVarietyName)")
                     }
                     .sheet(isPresented: $isShowInputView){
                        InputVarietyView(isPresented: self.$isShowInputView)
@@ -33,17 +36,28 @@ struct ContentView: View {
             }
             Spacer()
            
-            VStack(){
-                HStack(){
-                    Text("品種ID：" + Variety.InputVarietyID)
-                    Spacer()
+            HStack{
+                Button(action: {}){
+                    VStack{
+                    Text("設定")
+                        .font(.system(size: 50))
+                        .font(.largeTitle)
+                        Text("※開発中")
+                    }
                 }
-                .frame(width: 250.0)
-                HStack(){
-                    Text("品種名：" + Variety.InputVarietyName)
-                    Spacer()
-                }.frame(width: 250.0)
-            }.padding()
+                .disabled(true)
+                .padding()
+                Button("データ入力"){
+                    isShowInputView = true
+                }
+                .sheet(isPresented: $isShowInputView){
+                   InputVarietyView(isPresented: self.$isShowInputView)
+                }
+                .font(.system(size: 50))
+                .font(.largeTitle)
+                .padding()
+            }
+            
             Spacer()
         }
         .onAppear {

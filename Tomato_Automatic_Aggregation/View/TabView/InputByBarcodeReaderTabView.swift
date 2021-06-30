@@ -38,9 +38,20 @@ struct InputByBarcodeReaderTabView: View {
                                 isInputDataAppropriate = false
                             } else {
                                 isInputDataAppropriate = true
+                                EnterInputData.EnterData(ID: String(InputByBarcodeReader.dropLast(1)))
                             }
                         })
                     Spacer()
+                    
+                    if !InputByBarcodeReader.isEmpty {
+                        Button(action: {
+                            self.InputByBarcodeReader = ""
+                        }, label: {
+                            Image(systemName: "multiply.circle")
+                        })
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                    }
+                    
                 }
                 .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardDidShowNotification)){ _ in
                     isBarcodeReaderEditing = true
@@ -60,12 +71,6 @@ struct InputByBarcodeReaderTabView: View {
                 }
 
                 Text("ソフトウェアキーボード:")+Text("\(isBarcodeReaderEditing ? "true" : "false")")
-            }
-            .onDisappear {
-                if isInputDataAppropriate{
-                    EnterInputData.EnterData(ID: String(InputByBarcodeReader.dropLast(1)))
-                }
-                
             }
         }
     }

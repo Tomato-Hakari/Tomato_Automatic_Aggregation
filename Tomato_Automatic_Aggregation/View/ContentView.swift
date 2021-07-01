@@ -12,6 +12,8 @@ struct ContentView: View {
     @ObservedObject var reloader = Reloader()
     // データ入力画面が表示されているか
     @State var isShowInputView: Bool = false
+    // アラート表示用フラグ
+    @State var alertFlag = false
     
     var body: some View {
         VStack(){
@@ -24,9 +26,10 @@ struct ContentView: View {
                         Variety.InputVarietyName = ""
                         print("id:\(Variety.InputVarietyID)")
                         print("name:\(Variety.InputVarietyName)")
+                        alertFlag = true
                     }
-                    .sheet(isPresented: $isShowInputView){
-                       InputVarietyView(isPresented: self.$isShowInputView)
+                    .alert(isPresented: $alertFlag){
+                        Alert(title: Text("入力された品種データを\nリセットしました"))
                     }
                     .padding()
                     

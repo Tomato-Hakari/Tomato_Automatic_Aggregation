@@ -5,7 +5,7 @@
         "scion_short": "ピュア",
         "rootstock_name": "エンペラードール",
         "isYieldSurvey": true,
-        "ramarks": "ミニトマト、接ぎ木栽培"
+        "remarks": "ミニトマト、接ぎ木栽培"
     },
     {
         "id": "2021000000001",
@@ -13,7 +13,7 @@
         "scion_short": "",
         "rootstock_name": "",
         "isYieldSurvey": true,
-        "ramarks": "ミニトマト、自根栽培"
+        "remarks": "ミニトマト、自根栽培"
     },
     {
         "id": "2021000000002",
@@ -21,7 +21,7 @@
         "scion_short": "",
         "rootstock_name": "エンペラードール",
         "isYieldSurvey": true,
-        "ramarks": "ミニトマト、接ぎ木栽培"
+        "remarks": "ミニトマト、接ぎ木栽培"
     },
     {
         "id": "2021000000003",
@@ -29,7 +29,7 @@
         "scion_short": "ピュア",
         "rootstock_name": "エンペラードール",
         "isYieldSurvey": false,
-        "ramarks": "ミニトマト、接ぎ木栽培"
+        "remarks": "ミニトマト、接ぎ木栽培"
     },
     {
         "id": "2021000000004",
@@ -37,7 +37,7 @@
         "scion_short": "",
         "rootstock_name": "エンペラードール",
         "isYieldSurvey": false,
-        "ramarks": "ミニトマト、接ぎ木栽培"
+        "remarks": "ミニトマト、接ぎ木栽培"
     },
     {
         "id": "2021000000005",
@@ -45,7 +45,7 @@
         "scion_short": "ネクスト",
         "rootstock_name": "",
         "isYieldSurvey": false,
-        "ramarks": "大玉トマト、自根栽培"
+        "remarks": "大玉トマト、自根栽培"
     },
     {
         "id": "2021000000006",
@@ -53,7 +53,7 @@
         "scion_short": "はるか",
         "rootstock_name": "アーノルド",
         "isYieldSurvey": false,
-        "ramarks": "大玉トマト、接ぎ木栽培"
+        "remarks": "大玉トマト、接ぎ木栽培"
     },
     {
         "id": "2021000000007",
@@ -61,7 +61,7 @@
         "scion_short": "",
         "rootstock_name": "",
         "isYieldSurvey": false,
-        "ramarks": "ミディトマト"
+        "remarks": "ミディトマト"
     },
     {
         "id": "2021000000008",
@@ -69,7 +69,7 @@
         "scion_short": "ミックス",
         "rootstock_name": "",
         "isYieldSurvey": false,
-        "ramarks": "ミニトマト、ミックス"
+        "remarks": "ミニトマト、ミックス"
     },
     {
         "id": "2021000000009",
@@ -77,7 +77,7 @@
         "scion_short": "黄色",
         "rootstock_name": "",
         "isYieldSurvey": false,
-        "ramarks": "大玉トマト、黄色"
+        "remarks": "大玉トマト、黄色"
     },
     {
         "id": "2021000000010",
@@ -85,6 +85,6 @@
         "scion_short": "房どり",
         "rootstock_name": "",
         "isYieldSurvey": false,
-        "ramarks": "房どり用"
+        "remarks": "房どり用"
     },
 ]

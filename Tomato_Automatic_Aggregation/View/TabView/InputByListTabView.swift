@@ -16,7 +16,11 @@ struct InputByListTabView: View {
     // 品種IDと品種名の関連付け
     struct VarietiesDataBase: Codable {
         var id: String
-        var name: String
+        var scion_name: String
+        var scion_short: String
+        var rootstock_name: String
+        var isYieldSurvey: Bool
+        var remarks: String
     }
     let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
     
@@ -25,12 +29,12 @@ struct InputByListTabView: View {
             GroupBox(label: Text("一覧から品種を選択")) {
                 List(selection: $selectedVariety) {
                     ForEach(0..<Varieties.count) { num in
-                        Text("\(Varieties[num].name)")
+                        Text("\(Varieties[num].scion_name)")
                     }
                 }.environment(\.editMode, .constant(.active))
                 .onChange(of: selectedVariety){ value in
                     if (value != nil) {
-                        EnterInputData.EnterData(Name: Varieties[value!].name)
+                        EnterInputData.EnterData(Name: Varieties[value!].scion_name)
                     }
                 }
                 

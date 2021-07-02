@@ -9,6 +9,10 @@ import Foundation
 
 class Variety: ObservableObject {
     static var InputVarietyID: String = ""
-    static var InputVarietyName: String = ""
+    static var InputVarietyScionName: String = ""
+    static var InputVarietyScionShort: String = ""
+    static var InputVarietyRootstockName: String = ""
+    static var isInputVarietysYieldSurvey: Bool = false
+    static var InputVarietyRemarks: String = ""
 }
 

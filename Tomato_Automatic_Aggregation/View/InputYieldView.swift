@@ -20,7 +20,7 @@ struct InputYieldView: View {
             }
             .frame(width: 250.0)
             HStack(){
-                Text("品種名：" + Variety.InputVarietyName)
+                Text("品種名：" + Variety.InputVarietyScionName)
                 Spacer()
             }.frame(width: 250.0)
         }

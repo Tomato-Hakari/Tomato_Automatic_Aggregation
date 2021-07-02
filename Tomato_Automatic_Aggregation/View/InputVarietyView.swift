@@ -61,6 +61,7 @@ struct InputVarietyView: View {
                 }
             }
         }
+        .font(.body)
     }
 }
 

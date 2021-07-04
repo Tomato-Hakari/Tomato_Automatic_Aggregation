@@ -38,7 +38,7 @@ struct InputByBarcodeReaderTabView: View {
                                 isInputDataAppropriate = false
                             } else {
                                 isInputDataAppropriate = true
-                                EnterInputData.EnterData(ID: String(InputByBarcodeReader.dropLast(1)))
+                                DataManagement.EnterInputData(ID: String(InputByBarcodeReader.dropLast(1)))
                             }
                         })
                     Spacer()

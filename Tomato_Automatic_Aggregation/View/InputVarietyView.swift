@@ -53,7 +53,7 @@ struct InputVarietyView: View {
                     ToolbarItem(placement: .navigationBarTrailing){
                         
                         Button("収量測定へ"){
-                            if !Variety.InputVarietyName.isEmpty{
+                            if !Variety.InputVarietyID.isEmpty{
                                 isVarietyDataIn = true
                             }
                         }

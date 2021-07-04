@@ -36,20 +36,4 @@ class EnterInputData: NSObject {
             }
         }
     }
-    
-    // 品種名により入力する品種を決定
-    class func EnterData(Name name:String) {
-        print("EnterData:Name")
-        for num in 0..<Varieties.count {
-            if Varieties[num].scion_name == name {
-                Variety.InputVarietyID = Varieties[num].id
-                Variety.InputVarietyScionName = Varieties[num].scion_name
-                Variety.InputVarietyScionShort = Varieties[num].scion_short
-                Variety.InputVarietyRootstockName = Varieties[num].rootstock_name
-                Variety.isInputVarietysYieldSurvey = Varieties[num].isYieldSurvey
-                Variety.InputVarietyRemarks = Varieties[num].remarks
-                return
-            }
-        }
-    }
 }

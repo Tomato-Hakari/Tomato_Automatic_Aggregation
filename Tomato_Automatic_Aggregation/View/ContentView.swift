@@ -22,10 +22,7 @@ struct ContentView: View {
                     Text("\(reloader.value)")
                     Spacer()
                     Button("リセット"){
-                        Variety.InputVarietyID = ""
-                        Variety.InputVarietyName = ""
-                        print("id:\(Variety.InputVarietyID)")
-                        print("name:\(Variety.InputVarietyName)")
+                        DataManagement.ResetVariety()
                         alertFlag = true
                     }
                     .alert(isPresented: $alertFlag){

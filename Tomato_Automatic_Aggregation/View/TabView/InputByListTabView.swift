@@ -34,7 +34,7 @@ struct InputByListTabView: View {
                 }.environment(\.editMode, .constant(.active))
                 .onChange(of: selectedVariety){ value in
                     if (value != nil) {
-                        EnterInputData.EnterData(Name: Varieties[value!].scion_name)
+                        EnterInputData.EnterData(ID: Varieties[value!].id)
                     }
                 }
                 

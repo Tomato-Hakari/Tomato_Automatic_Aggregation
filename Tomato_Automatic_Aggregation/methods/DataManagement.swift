@@ -19,10 +19,10 @@ struct VarietiesDataBase: Codable {
 }
 let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
 
-class EnterInputData: NSObject {
+class DataManagement: NSObject {
 
     // 品種IDにより入力する品種を決定
-    class func EnterData(ID id:String) {
+    class func EnterInputData(ID id:String) {
         print("EnterData:ID")
         for num in 0..<Varieties.count {
             if Varieties[num].id == id {
@@ -36,4 +36,42 @@ class EnterInputData: NSObject {
             }
         }
     }
+    
+    // ListViewに表示する品種名を生成
+    class func MakeVarietiesViewName()->[String] {
+        var dataArray: [String] = []
+        var editString: String = ""
+        
+        for num in 0..<Varieties.count {
+            editString = ""
+            // 品種名表示を生成
+            if Varieties[num].scion_name != "" {
+                editString += Varieties[num].scion_name
+                if Varieties[num].rootstock_name != "" {
+                    // 台木がある場合(接ぎ木栽培)
+                    editString += "+" + Varieties[num].rootstock_name + "(接ぎ木栽培)"
+                } else {
+                    // 台木がない場合(自根栽培)
+                    editString += "(自根栽培)"
+                }
+            } else {
+                // 品種が混在するもの
+                editString += Varieties[num].remarks
+            }
+            dataArray.append(editString)
+        }
+        
+        return dataArray
+    }
+    
+    // Varietyクラスの値をリセット
+    class func ResetVariety() {
+        Variety.InputVarietyID = ""
+        Variety.InputVarietyScionName = ""
+        Variety.InputVarietyScionShort = ""
+        Variety.InputVarietyRootstockName = ""
+        Variety.isInputVarietysYieldSurvey = false
+        Variety.InputVarietyRemarks = ""
+    }
 }
+

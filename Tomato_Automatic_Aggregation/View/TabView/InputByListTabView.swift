@@ -24,17 +24,19 @@ struct InputByListTabView: View {
     }
     let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
     
+    let listText: [String] = DataManagement.MakeVarietiesViewName()
+    
     var body: some View {
         VStack{
             GroupBox(label: Text("一覧から品種を選択")) {
                 List(selection: $selectedVariety) {
                     ForEach(0..<Varieties.count) { num in
-                        Text("\(Varieties[num].scion_name)")
+                        Text("\(listText[num])")
                     }
                 }.environment(\.editMode, .constant(.active))
                 .onChange(of: selectedVariety){ value in
                     if (value != nil) {
-                        EnterInputData.EnterData(ID: Varieties[value!].id)
+                        DataManagement.EnterInputData(ID: Varieties[value!].id)
                     }
                 }
                 

@@ -47,16 +47,12 @@ struct InputYieldView: View {
                 Spacer()
             }.frame(width: 250.0)
             
-            Button("収量データ取得"){
+            Button("収量データ表示"){
                 UIApplication.shared.open(apiscaleURL!, options: [.universalLinksOnly: false], completionHandler: { completed in
                     print(completed)
                 })
             }
             .padding()
-            
-            HStack(){
-                Text("収量：")
-            }
         }
         .padding()
         .navigationBarTitle("収量入力")

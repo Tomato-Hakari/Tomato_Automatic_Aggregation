@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,9 +22,10 @@
 		2CB9642026675D9E002509FC /* InputByBarcodeReaderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641E26675D9E002509FC /* InputByBarcodeReaderTabView.swift */; };
 		2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */; };
 		2CD6F70E266CACC80034B1CD /* Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F70D266CACC80034B1CD /* Times.swift */; };
-		2CF767222668A3FF008096B0 /* GetVarietyDataFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */; };
+		2CF767222668A3FF008096B0 /* GeneralizationJSONDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF767212668A3FF008096B0 /* GeneralizationJSONDecode.swift */; };
 		2CF76724266BA890008096B0 /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF76723266BA890008096B0 /* DataManagement.swift */; };
 		F35F6E44268C89260069153E /* InputYieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F6E43268C89260069153E /* InputYieldView.swift */; };
+		F3A798C6269AAD3B0031F12C /* scaledata.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A798C5269AAD3B0031F12C /* scaledata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +46,17 @@
 		2CB9641E26675D9E002509FC /* InputByBarcodeReaderTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByBarcodeReaderTabView.swift; sourceTree = "<group>"; };
 		2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateCheckDigit.swift; sourceTree = "<group>"; };
 		2CD6F70D266CACC80034B1CD /* Times.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Times.swift; sourceTree = "<group>"; };
-		2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVarietyDataFromJSON.swift; sourceTree = "<group>"; };
+		2CF767212668A3FF008096B0 /* GeneralizationJSONDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralizationJSONDecode.swift; sourceTree = "<group>"; };
 		2CF76723266BA890008096B0 /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
 		F35F6E43268C89260069153E /* InputYieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputYieldView.swift; sourceTree = "<group>"; };
+		F3A7988326961F740031F12C /* RubyGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyGateway.framework; path = Carthage/Build/Mac/RubyGateway.framework; sourceTree = "<group>"; };
+		F3A7988A269625CB0031F12C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		F3A7988B269625CB0031F12C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		F3A798C5269AAD3B0031F12C /* scaledata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scaledata.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2CB963EF266742A3002509FC /* Frameworks */ = {
+		8AA9F95046D6A96AD56B4113 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,6 +71,7 @@
 			children = (
 				2CB963F4266742A3002509FC /* Tomato_Automatic_Aggregation */,
 				2CB963F3266742A3002509FC /* Products */,
+				F3A7988226961F740031F12C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +86,7 @@
 		2CB963F4266742A3002509FC /* Tomato_Automatic_Aggregation */ = {
 			isa = PBXGroup;
 			children = (
+				F378E4F1269F5083005DF531 /* extentions */,
 				2CB9642126686A15002509FC /* methods */,
 				2CB9640926675BD8002509FC /* data */,
 				2CB9641226675BD8002509FC /* Objects */,
@@ -106,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB9640A26675BD8002509FC /* varieties.json */,
+				F3A798C5269AAD3B0031F12C /* scaledata.json */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -144,23 +152,52 @@
 			isa = PBXGroup;
 			children = (
 				2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */,
-				2CF767212668A3FF008096B0 /* GetVarietyDataFromJSON.swift */,
 				2CF76723266BA890008096B0 /* DataManagement.swift */,
 				2CD6F70D266CACC80034B1CD /* Times.swift */,
 			);
 			path = methods;
 			sourceTree = "<group>";
 		};
+		F378E4F1269F5083005DF531 /* extentions */ = {
+			isa = PBXGroup;
+			children = (
+				2CF767212668A3FF008096B0 /* GeneralizationJSONDecode.swift */,
+			);
+			path = extentions;
+			sourceTree = "<group>";
+		};
+		F3A7988226961F740031F12C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3A7988A269625CB0031F12C /* Alamofire.framework */,
+				F3A7988B269625CB0031F12C /* SwiftyJSON.framework */,
+				F3A7988326961F740031F12C /* RubyGateway.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3A79895269653210031F12C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2CB963F1266742A3002509FC /* Tomato_Automatic_Aggregation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CB96406266742A5002509FC /* Build configuration list for PBXNativeTarget "Tomato_Automatic_Aggregation" */;
 			buildPhases = (
+				F3A79895269653210031F12C /* Headers */,
 				2CB963EE266742A3002509FC /* Sources */,
-				2CB963EF266742A3002509FC /* Frameworks */,
 				2CB963F0266742A3002509FC /* Resources */,
+				F3A798CC269C604B0031F12C /* ShellScript */,
+				8AA9F95046D6A96AD56B4113 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +219,7 @@
 				TargetAttributes = {
 					2CB963F1266742A3002509FC = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -194,6 +232,9 @@
 				Base,
 			);
 			mainGroup = 2CB963E9266742A3002509FC;
+			packageReferences = (
+				F35241092695B8EF0020963F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2CB963F3266742A3002509FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -212,10 +253,31 @@
 				2CB963FF266742A5002509FC /* Preview Assets.xcassets in Resources */,
 				2CB9641426675BD8002509FC /* varieties.json in Resources */,
 				2CB963FC266742A5002509FC /* Assets.xcassets in Resources */,
+				F3A798C6269AAD3B0031F12C /* scaledata.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3A798CC269C604B0031F12C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nenv > env.txt\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2CB963EE266742A3002509FC /* Sources */ = {
@@ -228,7 +290,7 @@
 				F35F6E44268C89260069153E /* InputYieldView.swift in Sources */,
 				2CB9641A26675BD8002509FC /* ContentView.swift in Sources */,
 				2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */,
-				2CF767222668A3FF008096B0 /* GetVarietyDataFromJSON.swift in Sources */,
+				2CF767222668A3FF008096B0 /* GeneralizationJSONDecode.swift in Sources */,
 				2CB9641B26675BD8002509FC /* Variety.swift in Sources */,
 				2CF76724266BA890008096B0 /* DataManagement.swift in Sources */,
 				2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */,
@@ -374,10 +436,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato_Automatic_Aggregation/Preview Content\"";
 				DEVELOPMENT_TEAM = GH5R2PKU3W;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tomato_Automatic_Aggregation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -385,6 +453,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TeraJun.Tomato-Automatic-Aggregation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -395,10 +465,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato_Automatic_Aggregation/Preview Content\"";
 				DEVELOPMENT_TEAM = GH5R2PKU3W;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Tomato_Automatic_Aggregation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -406,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TeraJun.Tomato-Automatic-Aggregation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -433,6 +510,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F35241092695B8EF0020963F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 2CB963EA266742A3002509FC /* Project object */;
 }

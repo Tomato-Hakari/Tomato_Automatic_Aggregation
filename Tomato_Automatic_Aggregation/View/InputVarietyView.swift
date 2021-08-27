@@ -27,7 +27,7 @@ struct InputVarietyView: View {
     var body: some View {
         NavigationView {
             VStack{
-                NavigationLink(destination: InputYieldView(isPresented: $isPresented), isActive: $isVarietyDataIn){
+                NavigationLink(destination: CheckVarietyView(isPresented: $isPresented), isActive: $isVarietyDataIn){
                     EmptyView()
                 }
                 TabView(selection: $selectedTab){

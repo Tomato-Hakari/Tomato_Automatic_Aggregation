@@ -29,7 +29,7 @@ struct InputByBarcodeReaderTabView: View {
                     Text("品種ID:")
                     CustomTextField(text: $InputByBarcodeReader, isFirstResponder: true)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(height:30)
+                        .frame(width:250, height:30)
                         .onReceive(Just($InputByBarcodeReader), perform: { _ in
                             if maxTextlength < InputByBarcodeReader.count {
                                 InputByBarcodeReader = String(InputByBarcodeReader.suffix(1))
@@ -45,7 +45,8 @@ struct InputByBarcodeReaderTabView: View {
                     
                     if !InputByBarcodeReader.isEmpty {
                         Button(action: {
-                            self.InputByBarcodeReader = ""
+                            print("button pushed")
+                            InputByBarcodeReader = ""
                         }, label: {
                             Image(systemName: "multiply.circle")
                         })
@@ -70,7 +71,8 @@ struct InputByBarcodeReaderTabView: View {
                     Text("").frame(height:0)
                 }
 
-                Text("ソフトウェアキーボード:")+Text("\(isBarcodeReaderEditing ? "true" : "false")")
+                Text("ソフトウェアキーボード:\(isBarcodeReaderEditing ? "true" : "false")")
+                    .hidden()
             }
         }
     }

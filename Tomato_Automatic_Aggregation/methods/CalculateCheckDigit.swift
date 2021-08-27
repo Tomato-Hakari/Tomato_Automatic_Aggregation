@@ -53,7 +53,11 @@ class CalculateCheckDigit: NSObject{
         let sumEvenAndOdd: Int = Even_sumAll * 3 + Odd_sumAll
         
         // チェックデジットの計算結果
-        let result: Int = 10 - (sumEvenAndOdd - (sumEvenAndOdd / 10) * 10)
+        var result: Int = 10 - (sumEvenAndOdd - (sumEvenAndOdd / 10) * 10)
+        
+        if result == 10 {
+            result = 0
+        }
         
         if result == CHECKDIGIT {
             return false

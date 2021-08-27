@@ -73,5 +73,46 @@ class DataManagement: NSObject {
         Variety.isInputVarietysYieldSurvey = false
         Variety.InputVarietyRemarks = ""
     }
+    
+    class func MakeInputVarietyViewName()->String {
+        var editString: String = ""
+        
+        // 品種名表示を生成
+        if Variety.InputVarietyScionName != "" {
+            editString += Variety.InputVarietyScionName
+            if Variety.InputVarietyRootstockName != "" {
+                // 台木がある場合(接ぎ木栽培)
+                editString += "+" + Variety.InputVarietyRootstockName + "(接ぎ木栽培)"
+            } else {
+                // 台木がない場合(自根栽培)
+                editString += "(自根栽培)"
+            }
+        } else {
+            // 品種が混在するもの
+            editString += Variety.InputVarietyRemarks
+        }
+        
+        return editString
+    }
+    
+    // Health Planet API のdateを加工
+    class func ProcessDate(DateString datestr:String) -> String {
+        if datestr.count != 12 {
+            return ""
+        }
+        var datelist:[String] = []
+        for cha in datestr {
+            datelist.append(String(cha))
+        }
+        var year:String = ""
+        for i in 0...3 {
+            year += datelist[i]
+        }
+        let month = datelist[4] + datelist[5]
+        let day = datelist[6] + datelist[7]
+        let time = datelist[8] + datelist[9] + ":" + datelist[10] + datelist[11]
+        
+        return year + "/" + month + "/" + day + " " + time
+    }
 }
 

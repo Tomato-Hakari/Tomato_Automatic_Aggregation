@@ -6,19 +6,8 @@
 //
 
 import SwiftUI
-import Alamofire
 
-struct InputYieldView: View {
-    // 体重計から得たデータを格納
-    struct ScaleData: Codable {
-        var date: String
-        var keydata: String
-        var model: String
-        var tag: String
-    }
-    
-    @State var scale: [ScaleData] = []
-    
+struct CheckVarietyView: View {
     // シートが開いている状態
     @Binding var isPresented: Bool
     
@@ -30,7 +19,7 @@ struct InputYieldView: View {
     
     var body: some View {
         VStack{
-            Button("Health Planet アプリへ遷移"){
+            Button("Health Planet アプリへ遷移(収量データ送信)"){
                 UIApplication.shared.open(HealthPlanetURL!, options: [.universalLinksOnly: false], completionHandler: { completed in
                     print(completed)
                 })
@@ -43,19 +32,16 @@ struct InputYieldView: View {
             .frame(width: 250.0)
             
             HStack(){
-                Text("品種名：" + Variety.InputVarietyScionName)
+                Text("品種名：" + DataManagement.MakeInputVarietyViewName())
                 Spacer()
             }.frame(width: 250.0)
             
-            Button("収量データ表示"){
-                UIApplication.shared.open(apiscaleURL!, options: [.universalLinksOnly: false], completionHandler: { completed in
-                    print(completed)
-                })
-            }
+            NavigationLink("収量データ表示",
+                destination: ScaleDataListView(isPresented: $isPresented))
             .padding()
         }
         .padding()
-        .navigationBarTitle("収量入力")
+        .navigationBarTitle("品種確認・収量取得準備")
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing){
                 Button("閉じる"){
@@ -66,9 +52,9 @@ struct InputYieldView: View {
     }
 }
 
-struct InputYieldView_Previews: PreviewProvider {
+struct CheckVarietyView_Previews: PreviewProvider {
     static var previews: some View {
-        InputYieldView(isPresented: Binding.constant(false))
+        CheckVarietyView(isPresented: Binding.constant(false))
     }
 }
 

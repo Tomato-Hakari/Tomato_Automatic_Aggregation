@@ -29,6 +29,7 @@ struct ContentView: View {
                         Alert(title: Text("入力された品種データを\nリセットしました"))
                     }
                     .padding()
+                    .hidden()
                     
                 }
                 Text("ミニトマト自動集計").font(.title).fontWeight(.bold).padding()

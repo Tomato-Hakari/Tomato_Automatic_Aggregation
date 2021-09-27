@@ -8,15 +8,7 @@
 import Foundation
 import UIKit
 
-// 品種IDと品種名の関連付け
-struct VarietiesDataBase: Codable {
-    var id: String
-    var scion_name: String
-    var scion_short: String
-    var rootstock_name: String
-    var isYieldSurvey: Bool
-    var remarks: String
-}
+
 let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
 
 class DataManagement: NSObject {
@@ -37,6 +29,26 @@ class DataManagement: NSObject {
         }
     }
     
+    class func MakeVarietyViewName(Scion scion:String, Rootstock rootstock:String, Remarks remarks:String) -> String {
+        var editString: String = ""
+        
+        if scion != "" {
+            editString += scion
+            if rootstock != "" {
+                // 台木がある場合(接ぎ木栽培)
+                editString += "+" + rootstock + "(接ぎ木栽培)"
+            } else {
+                // 台木がない場合(自根栽培)
+                editString += "(自根栽培)"
+            }
+        } else {
+            // 品種が混在するもの
+            editString += remarks
+        }
+        
+        return editString
+    }
+  
     // ListViewに表示する品種名を生成
     class func MakeVarietiesViewName()->[String] {
         var dataArray: [String] = []
@@ -44,20 +56,7 @@ class DataManagement: NSObject {
         
         for num in 0..<Varieties.count {
             editString = ""
-            // 品種名表示を生成
-            if Varieties[num].scion_name != "" {
-                editString += Varieties[num].scion_name
-                if Varieties[num].rootstock_name != "" {
-                    // 台木がある場合(接ぎ木栽培)
-                    editString += "+" + Varieties[num].rootstock_name + "(接ぎ木栽培)"
-                } else {
-                    // 台木がない場合(自根栽培)
-                    editString += "(自根栽培)"
-                }
-            } else {
-                // 品種が混在するもの
-                editString += Varieties[num].remarks
-            }
+            editString = MakeVarietyViewName(Scion: Varieties[num].scion_name, Rootstock: Varieties[num].rootstock_name, Remarks: Varieties[num].remarks)
             dataArray.append(editString)
         }
         
@@ -74,23 +73,11 @@ class DataManagement: NSObject {
         Variety.InputVarietyRemarks = ""
     }
     
+
     class func MakeInputVarietyViewName()->String {
         var editString: String = ""
         
-        // 品種名表示を生成
-        if Variety.InputVarietyScionName != "" {
-            editString += Variety.InputVarietyScionName
-            if Variety.InputVarietyRootstockName != "" {
-                // 台木がある場合(接ぎ木栽培)
-                editString += "+" + Variety.InputVarietyRootstockName + "(接ぎ木栽培)"
-            } else {
-                // 台木がない場合(自根栽培)
-                editString += "(自根栽培)"
-            }
-        } else {
-            // 品種が混在するもの
-            editString += Variety.InputVarietyRemarks
-        }
+        editString = MakeVarietyViewName(Scion: Variety.InputVarietyScionName, Rootstock: Variety.InputVarietyRootstockName, Remarks: Variety.InputVarietyRemarks)
         
         return editString
     }
@@ -110,9 +97,19 @@ class DataManagement: NSObject {
         }
         let month = datelist[4] + datelist[5]
         let day = datelist[6] + datelist[7]
-        let time = datelist[8] + datelist[9] + ":" + datelist[10] + datelist[11]
+        let time = datelist[8] + datelist[9] + ":" + datelist[10] + datelist[11] + ":00"
         
-        return year + "/" + month + "/" + day + " " + time
+        return year + "/" + month + "/" + day + "_" + time
+    }
+    
+    // 品種IDから対応する品種名を返す
+    class func VarietyIDtoName(ID id:String) -> String {
+        for num in 0..<Varieties.count {
+            if id == Varieties[num].id {
+                return MakeVarietyViewName(Scion: Varieties[num].scion_name, Rootstock: Varieties[num].rootstock_name, Remarks: Varieties[num].remarks)
+            }
+        }
+        return ""
     }
 }
 

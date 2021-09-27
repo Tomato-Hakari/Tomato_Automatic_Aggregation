@@ -14,6 +14,62 @@ struct SendDataToServerView: View {
     @State var selectedScaleDate:String
     @State var selectedScaleWeight:String
     
+    @State private var result = ""
+    
+    @State private var isSuccess: Bool = false
+    @State private var isError: Bool = false
+    
+    func OpenPHP() -> Bool {
+        let EncodedScion = Variety.InputVarietyScionName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        let EncodedScionShort = Variety.InputVarietyScionShort.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        let EncodedRootstock = Variety.InputVarietyRootstockName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        let EncodedRemarks = Variety.InputVarietyRemarks.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        
+        var PHPurl =  "http://www.cyanpuma31.sakura.ne.jp/accessDB/index.php?varietyID=\(Variety.InputVarietyID)"
+        
+        if !Variety.InputVarietyScionName.isEmpty {
+            PHPurl += "&scion=\(EncodedScion!)"
+        }
+        if !Variety.InputVarietyScionShort.isEmpty {
+            PHPurl += "&scionshort=\(EncodedScionShort!)"
+        }
+        if !Variety.InputVarietyRootstockName.isEmpty {
+            PHPurl += "&rootstock=\(EncodedRootstock!)"
+        }
+        PHPurl += "&issurvey=\(Variety.isInputVarietysYieldSurvey ? "1" : "0" )"
+        if !Variety.InputVarietyRemarks.isEmpty {
+            PHPurl += "&remarks=\(EncodedRemarks!)"
+        }
+        PHPurl += "&measurementdatetime=\(selectedScaleDate)&yield=\(selectedScaleWeight)"
+        
+        print("URL:\(PHPurl)")
+        
+        guard let url = URL(string: PHPurl) else {
+            isError = true
+            return false
+        }
+        
+        let request = URLRequest(url: url)
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data{
+                guard let stringdata = String(data: data, encoding: .utf8) else {
+                    print("JSON decode error")
+                    isError = true
+                    return
+                }
+                DispatchQueue.main.async {
+                    result = stringdata
+                    print("result:\(result)")
+                }
+            } else {
+                print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
+                isError = true
+            }
+        }.resume()
+        return true
+    }
+    
     var body: some View {
         VStack {
             GroupBox(label: Text("品種と収量データを確認してください")) {
@@ -38,11 +94,26 @@ struct SendDataToServerView: View {
         .navigationBarTitle("入力データ確認")
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing){
-                Button("閉じる"){
-                    isPresented = false
+                Button(action: {
+                    DispatchQueue.main.async {
+                        print("execute OpenPHP")
+                        isSuccess = OpenPHP()
+                        
+                    }
+                    print("isSuccess:\(String(isSuccess))")
+                    if isSuccess {
+                        isPresented = false
+                    }
+                }) {
+                    Text("データ送信")
                 }
+                
             }
         }
+        .onDisappear {
+            flag.isSuccessed = true
+        }
+        
     }
 }
 

@@ -37,6 +37,13 @@ struct ContentView: View {
             }
             Spacer()
            
+            if flag.isSuccessed {
+                Text("データの送信に成功しました!")
+                    .font(.system(size: 30))
+                    .foregroundColor(.orange)
+                    .padding()
+            }
+            
             HStack{
                 Button(action: {}){
                     VStack{
@@ -49,6 +56,7 @@ struct ContentView: View {
                 .disabled(true)
                 .padding()
                 Button("データ入力"){
+                    flag.isSuccessed = false
                     isShowInputView = true
                 }
                 .sheet(isPresented: $isShowInputView){

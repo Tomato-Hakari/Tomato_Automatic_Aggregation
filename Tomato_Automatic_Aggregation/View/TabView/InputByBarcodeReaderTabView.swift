@@ -57,6 +57,7 @@ struct InputByBarcodeReaderTabView: View {
                             InputByBarcodeReader = ""
                         }, label: {
                             Image(systemName: "multiply.circle")
+                                .frame(width: 40.0, height: 40.0)
                         })
                         .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
                     }
@@ -78,7 +79,14 @@ struct InputByBarcodeReaderTabView: View {
                 } else {
                     Text("").frame(height:0)
                 }
-
+                
+                if isInputDataAppropriate {
+                    Text("品種名: \(DataManagement.VarietyIDtoName(ID: String(InputByBarcodeReader.prefix(13))))")
+                        .font(.system(size: 25))
+                        .background(Color.yellow)
+                        .foregroundColor(.white)
+                        .padding()
+                }
                 Text("ソフトウェアキーボード:\(isBarcodeReaderEditing ? "true" : "false")")
                     .hidden()
             }

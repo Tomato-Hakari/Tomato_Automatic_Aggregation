@@ -13,15 +13,7 @@ import Combine
 struct InputByListTabView: View {
     // Pickerで選択された品種
     @State var selectedVariety: Int? = nil
-    // 品種IDと品種名の関連付け
-    struct VarietiesDataBase: Codable {
-        var id: String
-        var scion_name: String
-        var scion_short: String
-        var rootstock_name: String
-        var isYieldSurvey: Bool
-        var remarks: String
-    }
+
     let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
     
     let listText: [String] = DataManagement.MakeVarietiesViewName()

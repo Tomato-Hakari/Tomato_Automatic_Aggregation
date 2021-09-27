@@ -17,6 +17,10 @@ struct InputByBarcodeReaderTabView: View {
     @State var isBarcodeReaderEditing: Bool = false
     // 入力値が適切かどうか
     @State var isInputDataAppropriate: Bool = false
+    
+    let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
+    
+    @State var currentVarietyName: String = ""
 
     var body: some View {
         ZStack{
@@ -25,6 +29,8 @@ struct InputByBarcodeReaderTabView: View {
             }
 
             VStack{
+                
+                
                 HStack{
                     Text("品種ID:")
                     CustomTextField(text: $InputByBarcodeReader, isFirstResponder: true)
@@ -36,9 +42,11 @@ struct InputByBarcodeReaderTabView: View {
                             }
                             if CalculateCheckDigit.isErrorInBarcode(InputByBarcodeReader) {
                                 isInputDataAppropriate = false
+                                currentVarietyName = ""
                             } else {
                                 isInputDataAppropriate = true
                                 DataManagement.EnterInputData(ID: String(InputByBarcodeReader.dropLast(1)))
+                                
                             }
                         })
                     Spacer()

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,7 +29,9 @@
 		F34FBE1126CD881E00732FE1 /* ScaleDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34FBE1026CD881E00732FE1 /* ScaleDataListView.swift */; };
 		F34FBE1326CDC94300732FE1 /* SendDataToServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34FBE1226CDC94300732FE1 /* SendDataToServerView.swift */; };
 		F35F6E44268C89260069153E /* CheckVarietyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F6E43268C89260069153E /* CheckVarietyView.swift */; };
+		F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A43E12701450300E14763 /* VarietiesDataBase.swift */; };
 		F3A798C6269AAD3B0031F12C /* scaledata.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A798C5269AAD3B0031F12C /* scaledata.json */; };
+		F3E3067F2702378F003BB311 /* flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E3067E2702378F003BB311 /* flag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,10 +59,9 @@
 		F34FBE1026CD881E00732FE1 /* ScaleDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDataListView.swift; sourceTree = "<group>"; };
 		F34FBE1226CDC94300732FE1 /* SendDataToServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataToServerView.swift; sourceTree = "<group>"; };
 		F35F6E43268C89260069153E /* CheckVarietyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVarietyView.swift; sourceTree = "<group>"; };
-		F3A7988326961F740031F12C /* RubyGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyGateway.framework; path = Carthage/Build/Mac/RubyGateway.framework; sourceTree = "<group>"; };
-		F3A7988A269625CB0031F12C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		F3A7988B269625CB0031F12C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		F36A43E12701450300E14763 /* VarietiesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarietiesDataBase.swift; sourceTree = "<group>"; };
 		F3A798C5269AAD3B0031F12C /* scaledata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scaledata.json; sourceTree = "<group>"; };
+		F3E3067E2702378F003BB311 /* flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +80,6 @@
 			children = (
 				2CB963F4266742A3002509FC /* Tomato_Automatic_Aggregation */,
 				2CB963F3266742A3002509FC /* Products */,
-				F3A7988226961F740031F12C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,8 +144,10 @@
 		2CB9641226675BD8002509FC /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				F36A43E12701450300E14763 /* VarietiesDataBase.swift */,
 				2CB9641326675BD8002509FC /* Variety.swift */,
 				F34FBE0C26CD767D00732FE1 /* Scale_Data.swift */,
+				F3E3067E2702378F003BB311 /* flag.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -178,16 +180,6 @@
 			path = extentions;
 			sourceTree = "<group>";
 		};
-		F3A7988226961F740031F12C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F3A7988A269625CB0031F12C /* Alamofire.framework */,
-				F3A7988B269625CB0031F12C /* SwiftyJSON.framework */,
-				F3A7988326961F740031F12C /* RubyGateway.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -216,6 +208,8 @@
 			dependencies = (
 			);
 			name = Tomato_Automatic_Aggregation;
+			packageProductDependencies = (
+			);
 			productName = Tomato_Automatic_Aggregation;
 			productReference = 2CB963F2266742A3002509FC /* Tomato_Automatic_Aggregation.app */;
 			productType = "com.apple.product-type.application";
@@ -245,7 +239,6 @@
 			);
 			mainGroup = 2CB963E9266742A3002509FC;
 			packageReferences = (
-				F35241092695B8EF0020963F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 2CB963F3266742A3002509FC /* Products */;
 			projectDirPath = "";
@@ -312,8 +305,10 @@
 				2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */,
 				2CB963F8266742A3002509FC /* SceneDelegate.swift in Sources */,
 				2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */,
+				F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */,
 				2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */,
 				2CD6F70E266CACC80034B1CD /* Times.swift in Sources */,
+				F3E3067F2702378F003BB311 /* flag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +329,7 @@
 		2CB96404266742A5002509FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -395,7 +390,7 @@
 		2CB96405266742A5002509FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -463,6 +458,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tomato_Automatic_Aggregation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +468,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -492,6 +488,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tomato_Automatic_Aggregation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +497,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -526,17 +523,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F35241092695B8EF0020963F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 2CB963EA266742A3002509FC /* Project object */;
 }

@@ -84,7 +84,7 @@ struct InputByBarcodeReaderTabView: View {
                     Text("品種名: \(DataManagement.VarietyIDtoName(ID: String(InputByBarcodeReader.prefix(13))))")
                         .font(.system(size: 25))
                         .background(Color.yellow)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                         .padding()
                 }
                 Text("ソフトウェアキーボード:\(isBarcodeReaderEditing ? "true" : "false")")

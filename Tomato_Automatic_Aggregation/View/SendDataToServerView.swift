@@ -25,7 +25,7 @@ struct SendDataToServerView: View {
         let EncodedRootstock = Variety.InputVarietyRootstockName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let EncodedRemarks = Variety.InputVarietyRemarks.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         
-        var PHPurl =  "http://www.cyanpuma31.sakura.ne.jp/accessDB/upload.php?varietyID=\(Variety.InputVarietyID)"
+        var PHPurl =  "\(DataManagement.GeneratePHPURLHead())/upload.php?varietyID=\(Variety.InputVarietyID)"
         
         if !Variety.InputVarietyScionName.isEmpty {
             PHPurl += "&scion=\(EncodedScion!)"
@@ -95,11 +95,8 @@ struct SendDataToServerView: View {
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing){
                 Button(action: {
-                    DispatchQueue.main.async {
-                        print("execute OpenPHP")
-                        isSuccess = OpenPHP()
-                        
-                    }
+                    print("execute OpenPHP")
+                    isSuccess = OpenPHP()
                     print("isSuccess:\(String(isSuccess))")
                     if isSuccess {
                         isPresented = false

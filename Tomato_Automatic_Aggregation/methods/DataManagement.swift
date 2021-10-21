@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
+let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON(file: "varieties.json")
 
 class DataManagement: NSObject {
 
@@ -110,6 +110,11 @@ class DataManagement: NSObject {
             }
         }
         return ""
+    }
+    
+    // PHPスクリプトのURLの先頭を返す
+    class func GeneratePHPURLHead() -> String {
+        return "http://www.cyanpuma31.sakura.ne.jp/accessDB/\(flag.currentmode)"
     }
 }
 

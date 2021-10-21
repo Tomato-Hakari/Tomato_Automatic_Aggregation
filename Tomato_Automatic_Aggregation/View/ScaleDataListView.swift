@@ -14,6 +14,8 @@ struct ScaleDataListView: View {
     
     @ObservedObject var reloader = Reloader()
     
+    @ObservedObject var period = LoadingPeriod()
+    
     @State var isButtonActive:Bool = false
     
     @ObservedObject var scaledata = ScaleDataFetcher()
@@ -29,15 +31,34 @@ struct ScaleDataListView: View {
             NavigationLink(destination: SendDataToServerView(isPresented: $isPresented, selectedScaleDate: selectedScaleDate, selectedScaleWeight: selectedScaleWeight), isActive: $isButtonActive){
                 EmptyView()
             }
-            GroupBox(label: Text("適切な収量を選択\n(表示されてない場合は前の画面に一度戻り再度この画面を開いてください)")) {
-                List(selection: $selectedData) {
-                    ForEach(0..<scaledata.scale_datum.count) { index in
-                        Text("\(DataManagement.ProcessDate(DateString: scaledata.scale_datum[index].date)) \(scaledata.scale_datum[index].weight)kg")
-                    }
-                }.environment(\.editMode, .constant(.active))
+            ZStack{
+                GroupBox(label: Text("適切な収量を選択")) {
+                    List(selection: $selectedData) {
+                        ForEach(0..<scaledata.scale_datum.count, id:\.self) { index in
+                            Text("\(DataManagement.ProcessDate(DateString: scaledata.scale_datum[index].date)) \(scaledata.scale_datum[index].weight)kg")
+                        }
+                    }.environment(\.editMode, .constant(.active))
+                }
+                if scaledata.scale_datum.count == 0 {
+                    Text("読み込み中\(period.period)")
+                        .font(.system(size: 50))
+                        .multilineTextAlignment(.leading)
+                        .frame(width: 300.0)
+                        .onAppear{
+                            period.start()
+                        }
+                        .onDisappear{
+                            period.stop()
+                            print("scale_data.measurementdatetime:\(scaledata.scale_datum[0].date)")
+                        }
+                }
             }
         }
         .padding()
+        .onAppear {
+            scaledata.deleteAll()
+            scaledata.load()
+        }
         .navigationBarTitle("収量選択\(reloader.value)")
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing){
@@ -54,6 +75,7 @@ struct ScaleDataListView: View {
         }
         .onAppear {
             reloader.start()
+            scaledata.load()
         }
     }
 }

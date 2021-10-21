@@ -23,4 +23,8 @@ class ScaleDataFetcher: ObservableObject {
             }
         }.resume()
     }
+    
+    func deleteAll() {
+        self.scale_datum.removeAll()
+    }
 }

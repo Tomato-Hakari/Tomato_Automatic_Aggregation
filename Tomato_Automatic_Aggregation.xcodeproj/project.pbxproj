@@ -32,6 +32,11 @@
 		F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A43E12701450300E14763 /* VarietiesDataBase.swift */; };
 		F3A798C6269AAD3B0031F12C /* scaledata.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A798C5269AAD3B0031F12C /* scaledata.json */; };
 		F3E3067F2702378F003BB311 /* flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E3067E2702378F003BB311 /* flag.swift */; };
+		F3E30681271C929F003BB311 /* CheckDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30680271C929F003BB311 /* CheckDataView.swift */; };
+		F3E30683271D4792003BB311 /* CheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30682271D4792003BB311 /* CheckData.swift */; };
+		F3E30685271DC10E003BB311 /* GetCheckDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30684271DC10E003BB311 /* GetCheckDataView.swift */; };
+		F3E30687271E105C003BB311 /* LoadingPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30686271E105C003BB311 /* LoadingPeriod.swift */; };
+		F3E30689271E6730003BB311 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30688271E6730003BB311 /* ConfigView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,11 @@
 		F36A43E12701450300E14763 /* VarietiesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarietiesDataBase.swift; sourceTree = "<group>"; };
 		F3A798C5269AAD3B0031F12C /* scaledata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scaledata.json; sourceTree = "<group>"; };
 		F3E3067E2702378F003BB311 /* flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flag.swift; sourceTree = "<group>"; };
+		F3E30680271C929F003BB311 /* CheckDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDataView.swift; sourceTree = "<group>"; };
+		F3E30682271D4792003BB311 /* CheckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckData.swift; sourceTree = "<group>"; };
+		F3E30684271DC10E003BB311 /* GetCheckDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCheckDataView.swift; sourceTree = "<group>"; };
+		F3E30686271E105C003BB311 /* LoadingPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPeriod.swift; sourceTree = "<group>"; };
+		F3E30688271E6730003BB311 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,9 +144,12 @@
 				F35F6E43268C89260069153E /* CheckVarietyView.swift */,
 				F34FBE1026CD881E00732FE1 /* ScaleDataListView.swift */,
 				F34FBE1226CDC94300732FE1 /* SendDataToServerView.swift */,
+				2CB9641126675BD8002509FC /* ContentView.swift */,
+				F3E30688271E6730003BB311 /* ConfigView.swift */,
+				F3E30680271C929F003BB311 /* CheckDataView.swift */,
+				F3E30684271DC10E003BB311 /* GetCheckDataView.swift */,
 				2CB9640E26675BD8002509FC /* CustomTextField.swift */,
 				2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */,
-				2CB9641126675BD8002509FC /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +161,7 @@
 				2CB9641326675BD8002509FC /* Variety.swift */,
 				F34FBE0C26CD767D00732FE1 /* Scale_Data.swift */,
 				F3E3067E2702378F003BB311 /* flag.swift */,
+				F3E30682271D4792003BB311 /* CheckData.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -167,6 +181,7 @@
 				2CB9642226686ABD002509FC /* CalculateCheckDigit.swift */,
 				2CF76723266BA890008096B0 /* DataManagement.swift */,
 				2CD6F70D266CACC80034B1CD /* Times.swift */,
+				F3E30686271E105C003BB311 /* LoadingPeriod.swift */,
 				F34FBE0E26CD789800732FE1 /* ScaleDatafetcher.swift */,
 			);
 			path = methods;
@@ -295,6 +310,7 @@
 				F35F6E44268C89260069153E /* CheckVarietyView.swift in Sources */,
 				F34FBE1326CDC94300732FE1 /* SendDataToServerView.swift in Sources */,
 				F34FBE0F26CD789800732FE1 /* ScaleDatafetcher.swift in Sources */,
+				F3E30689271E6730003BB311 /* ConfigView.swift in Sources */,
 				2CB9641A26675BD8002509FC /* ContentView.swift in Sources */,
 				2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */,
 				2CF767222668A3FF008096B0 /* GeneralizationJSONDecode.swift in Sources */,
@@ -302,13 +318,17 @@
 				2CF76724266BA890008096B0 /* DataManagement.swift in Sources */,
 				F34FBE0D26CD767D00732FE1 /* Scale_Data.swift in Sources */,
 				F34FBE1126CD881E00732FE1 /* ScaleDataListView.swift in Sources */,
+				F3E30685271DC10E003BB311 /* GetCheckDataView.swift in Sources */,
 				2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */,
+				F3E30687271E105C003BB311 /* LoadingPeriod.swift in Sources */,
 				2CB963F8266742A3002509FC /* SceneDelegate.swift in Sources */,
 				2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */,
+				F3E30683271D4792003BB311 /* CheckData.swift in Sources */,
 				F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */,
 				2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */,
 				2CD6F70E266CACC80034B1CD /* Times.swift in Sources */,
 				F3E3067F2702378F003BB311 /* flag.swift in Sources */,
+				F3E30681271C929F003BB311 /* CheckDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

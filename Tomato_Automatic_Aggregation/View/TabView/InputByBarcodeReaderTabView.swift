@@ -18,7 +18,7 @@ struct InputByBarcodeReaderTabView: View {
     // 入力値が適切かどうか
     @State var isInputDataAppropriate: Bool = false
     
-    let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
+    let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON(file: "varieties.json")
     
     @State var currentVarietyName: String = ""
 

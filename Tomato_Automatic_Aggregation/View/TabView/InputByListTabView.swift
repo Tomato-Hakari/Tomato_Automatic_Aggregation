@@ -14,7 +14,7 @@ struct InputByListTabView: View {
     // Pickerで選択された品種
     @State var selectedVariety: Int? = nil
 
-    let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON("varieties.json")
+    let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON(file: "varieties.json")
     
     let listText: [String] = DataManagement.MakeVarietiesViewName()
     

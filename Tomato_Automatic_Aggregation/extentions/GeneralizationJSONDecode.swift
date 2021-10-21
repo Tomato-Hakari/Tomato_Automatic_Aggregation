@@ -10,7 +10,7 @@ import UIKit
 
 // Bundleに拡張機能を追加し、JSONファイル読み込みを汎用化
 extension Bundle {
-    func decodeJSON<T: Codable>(_ file: String) -> T {
+    func decodeJSON<T: Codable>(file: String) -> T {
         guard let url = self.url(forResource: file, withExtension: nil) else {
             fatalError("Failed to locate \(file) in bundle.")
         }

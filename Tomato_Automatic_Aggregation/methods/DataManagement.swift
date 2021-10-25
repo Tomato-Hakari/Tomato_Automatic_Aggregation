@@ -116,5 +116,25 @@ class DataManagement: NSObject {
     class func GeneratePHPURLHead() -> String {
         return "http://www.cyanpuma31.sakura.ne.jp/accessDB/\(flag.currentmode)"
     }
+    
+    // String=>Date変換
+    class func DateFromString(string: String, format: String) -> Date {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.dateFormat = format
+        return formatter.date(from: string)!
+    }
+    
+    // Date=>String変換
+    class func StringFromDate(date: Date, format: String) ->String {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
 }
 

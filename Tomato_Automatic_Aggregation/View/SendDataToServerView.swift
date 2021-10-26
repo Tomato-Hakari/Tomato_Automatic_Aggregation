@@ -11,15 +11,20 @@ struct SendDataToServerView: View {
     // シートが開いている状態
     @Binding var isPresented: Bool
     
-    @State var selectedScaleDate:String
-    @State var selectedScaleWeight:String
+    @State var selectedScaleData: [SelectedScaleData]
+    @State var weightsum: Float = 0.0
+    
+    @State var containers:[Int] = Array(repeating: 1, count:1000)
     
     @State private var result = ""
     
     @State private var isSuccess: Bool = false
+    @State private var successed: [Bool] = []
+    @State private var erroredIndex: [Int] = []
     @State private var isError: Bool = false
+    @State private var ShowingAlert: Bool = false
     
-    func OpenPHP() -> Bool {
+    func OpenPHP(scaleDate: String, yield: String) -> Bool {
         let EncodedScion = Variety.InputVarietyScionName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let EncodedScionShort = Variety.InputVarietyScionShort.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let EncodedRootstock = Variety.InputVarietyRootstockName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
@@ -40,7 +45,7 @@ struct SendDataToServerView: View {
         if !Variety.InputVarietyRemarks.isEmpty {
             PHPurl += "&remarks=\(EncodedRemarks!)"
         }
-        PHPurl += "&measurementdatetime=\(selectedScaleDate)&yield=\(selectedScaleWeight)"
+        PHPurl += "&measurementdatetime=\(scaleDate)&yield=\(yield)"
         
         print("URL:\(PHPurl)")
         
@@ -83,23 +88,67 @@ struct SendDataToServerView: View {
                         Text("備考:\(Variety.InputVarietyRemarks)")
                     }
                     Section(header: Text("収量")) {
-                        Text("測定日時:\(selectedScaleDate)")
-                        Text("重量[kg]:\(selectedScaleWeight)")
+                        HStack{
+                            Text("重量合計:\(String(format: "%.2f", weightsum))")
+                                .font(.system(size: 20))
+                                .fontWeight(.bold)
+                            Spacer()
+                            Text("※コンテナの重量を差し引いた値")
+                        }
+                        .padding()
+                        .background(Color.green)
+                        ForEach(0..<selectedScaleData.count) { num in
+                            Section(header: HStack{
+                                Text("\(num+1)個目")
+                                    .fontWeight(.bold)
+                                Spacer()
+                                Stepper(value: $containers[num], in: 0...10) {
+                                    Text("コンテナの数: \(containers[num])")
+                                }
+                            }) {
+                                Text("測定日時:\(selectedScaleData[num].date)")
+                                HStack{
+                                    Text("重量[kg]:\(DataManagement.CalculateYield(weightString:selectedScaleData[num].weight , containers: Float(containers[num])))")
+                                    Spacer()
+                                    Text("※コンテナの重量を差し引いた値")
+                                }
+                                Divider()
+                            }
+                            .onChange(of: containers[num]) { _ in
+                                weightsum = 0.0
+                                for i in 0..<selectedScaleData.count {
+                                    weightsum += Float(DataManagement.CalculateYield(weightString:selectedScaleData[i].weight , containers: Float(containers[i])))!
+                                }
+                                weightsum = round(weightsum * 100) / 100
+                            }
+                        }
+                        
                     }
                 }
                 .listStyle(InsetGroupedListStyle())
             }
         }
         .padding()
+        .alert(isPresented: $ShowingAlert) {
+            Alert(title: Text("データ送信失敗"), message: Text("\(erroredIndex.count)個のデータ送信に失敗しました"), dismissButton: .default(Text("OK")))
+        }
         .navigationBarTitle("入力データ確認")
         .toolbar{
             ToolbarItem(placement: .navigationBarTrailing){
                 Button(action: {
-                    print("execute OpenPHP")
-                    isSuccess = OpenPHP()
+                    for num in 0..<selectedScaleData.count {
+                        successed[num] = OpenPHP(scaleDate: selectedScaleData[num].date, yield: DataManagement.CalculateYield(weightString:selectedScaleData[num].weight , containers: Float(containers[num])))
+                        print(successed[num])
+                    }
+                    erroredIndex = DataManagement.FalseInArray(array: successed)
+                    if erroredIndex.isEmpty {
+                        isSuccess = true
+                    }
                     print("isSuccess:\(String(isSuccess))")
                     if isSuccess {
                         isPresented = false
+                    } else {
+                        ShowingAlert = true
                     }
                 }) {
                     Text("データ送信")
@@ -107,15 +156,19 @@ struct SendDataToServerView: View {
                 
             }
         }
+        .onAppear {
+            weightsum = 0.0
+            for i in 0..<selectedScaleData.count {
+                weightsum += Float(DataManagement.CalculateYield(weightString:selectedScaleData[i].weight , containers: Float(containers[i])))! * 100
+            }
+            weightsum /= 100
+            successed = Array(repeating: false, count: selectedScaleData.count)
+        }
         .onDisappear {
-            flag.isSuccessed = true
+            if isSuccess {
+                flag.isSuccessed = true
+            }
         }
         
-    }
-}
-
-struct SendDataToServerView_Previews: PreviewProvider {
-    static var previews: some View {
-        SendDataToServerView(isPresented: Binding.constant(false), selectedScaleDate: "no data", selectedScaleWeight: "no data")
     }
 }

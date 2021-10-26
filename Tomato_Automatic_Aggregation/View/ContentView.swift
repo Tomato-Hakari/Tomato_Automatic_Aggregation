@@ -54,6 +54,7 @@ struct ContentView: View {
                 
                 HStack{
                     Button(action: {
+                        flag.isSuccessed = false
                         isShowCheckView = true
                     }) {
                         Text("データ確認")

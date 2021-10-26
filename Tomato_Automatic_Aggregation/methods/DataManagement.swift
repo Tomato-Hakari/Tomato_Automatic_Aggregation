@@ -128,13 +128,74 @@ class DataManagement: NSObject {
     }
     
     // Date=>String変換
-    class func StringFromDate(date: Date, format: String) ->String {
+    class func StringFromDate(date: Date, format: String) -> String {
         let formatter: DateFormatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.calendar = Calendar(identifier: .gregorian)
         formatter.timeZone = TimeZone(abbreviation: "UTC")
         formatter.dateFormat = format
         return formatter.string(from: date)
+    }
+    
+    // 現在から24時間以内ならtrueを返す
+    class func isToday(dateString: String, format: String) -> Bool {
+        let calender = Calendar(identifier: .gregorian)
+        
+        // 現在年月日を取得
+        let todayUTC = Date()
+        let todayJST = Calendar.current.date(byAdding: .hour, value: 9, to: todayUTC)!
+        
+        // 引数の日時をDate型に変換
+        let date = self.DateFromString(string: dateString, format: format)
+        
+        let diff = calender.dateComponents([.hour], from: date, to: todayJST)
+        
+        if diff.hour! >= 0 && diff.hour! <= 24 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    // 現在から30日以内ならtrueを返す
+    class func isTomonth(dateString: String, format: String) -> Bool {
+        let calender = Calendar(identifier: .gregorian)
+        
+        // 現在年月日を取得
+        let todayUTC = Date()
+        let todayJST = Calendar.current.date(byAdding: .hour, value: 9, to: todayUTC)!
+        
+        // 引数の日時をDate型に変換
+        let date = self.DateFromString(string: dateString, format: format)
+        
+        let diff = calender.dateComponents([.day], from: date, to: todayJST)
+        
+        if diff.day! >= 0 && diff.day! <= 30 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    // String型の重量データからコンテナの重量を減じてString型で返す
+    class func CalculateYield(weightString: String, containers: Float) -> String {
+        let containerWeight: Float = 1.2 * containers
+        let weight = Float(weightString)!
+        
+        let yield: Float = round((weight - containerWeight) * 100) / 100
+        
+        return String(yield)
+    }
+    
+    // Bool型配列の内容がすべてtrueなら空配列を、falseがあれば該当するインデックスを配列で返す
+    class func FalseInArray(array:[Bool]) -> [Int] {
+        var falses: [Int] = []
+        for num in 0..<array.count {
+            if !array[num] {
+                falses.append(num)
+            }
+        }
+        return falses
     }
 }
 

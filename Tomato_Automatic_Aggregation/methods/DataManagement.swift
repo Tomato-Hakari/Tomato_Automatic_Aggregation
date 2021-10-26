@@ -29,6 +29,7 @@ class DataManagement: NSObject {
         }
     }
     
+    // 穂木品種名と台木品種名から表示上の品種名を生成
     class func MakeVarietyViewName(Scion scion:String, Rootstock rootstock:String, Remarks remarks:String) -> String {
         var editString: String = ""
         
@@ -61,16 +62,6 @@ class DataManagement: NSObject {
         }
         
         return dataArray
-    }
-    
-    // Varietyクラスの値をリセット
-    class func ResetVariety() {
-        Variety.InputVarietyID = ""
-        Variety.InputVarietyScionName = ""
-        Variety.InputVarietyScionShort = ""
-        Variety.InputVarietyRootstockName = ""
-        Variety.isInputVarietysYieldSurvey = false
-        Variety.InputVarietyRemarks = ""
     }
     
 

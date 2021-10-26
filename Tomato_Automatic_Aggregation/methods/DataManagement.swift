@@ -50,7 +50,7 @@ class DataManagement: NSObject {
         return editString
     }
   
-    // ListViewに表示する品種名を生成
+    // ListViewに表示する品種名を生成しString型配列で返す
     class func MakeVarietiesViewName()->[String] {
         var dataArray: [String] = []
         var editString: String = ""
@@ -64,7 +64,7 @@ class DataManagement: NSObject {
         return dataArray
     }
     
-
+    // 入力データ確認用の品種名を生成しString型で返す
     class func MakeInputVarietyViewName()->String {
         var editString: String = ""
         
@@ -73,7 +73,7 @@ class DataManagement: NSObject {
         return editString
     }
     
-    // Health Planet API のdateを加工
+    // Health Planet API のdate(yyyyMMddHHmm)を加工
     class func ProcessDate(DateString datestr:String) -> String {
         if datestr.count != 12 {
             return ""

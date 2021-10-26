@@ -38,7 +38,6 @@ struct GetCheckDataView: View {
                 }
                 DispatchQueue.main.async {
                     result = stringdata
-                    print(result)
                     if result != "[]" {
                         let decoder = JSONDecoder()
                         TomatoData = try! decoder.decode([CheckData].self, from: result.data(using: .utf8)!)

@@ -30,7 +30,7 @@ struct ContentView: View {
                         Text("\(reloader.value)")
                         Spacer()
                         Button("リセット"){
-                            DataManagement.ResetVariety()
+                            Variety.ResetVariety()
                             alertFlag = true
                         }
                         .alert(isPresented: $alertFlag){

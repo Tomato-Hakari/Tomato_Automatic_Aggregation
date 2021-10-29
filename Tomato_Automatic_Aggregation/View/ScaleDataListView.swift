@@ -38,7 +38,7 @@ struct ScaleDataListView: View {
                 GroupBox(label:VStack{
                     Text("適切な収量を選択")
                     HStack{
-                        Text("表示する期間を選択6t6→")
+                        Text("表示する期間を選択→")
                         Picker(selection: $selectedPeriod, label: Text(""), content: {
                             ForEach(0..<periods.count, id: \.self) { value in
                                 Text("\(periods[value])")

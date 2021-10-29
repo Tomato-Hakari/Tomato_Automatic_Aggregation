@@ -15,7 +15,6 @@
 		2CB9641426675BD8002509FC /* varieties.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CB9640A26675BD8002509FC /* varieties.json */; };
 		2CB9641526675BD8002509FC /* InputVarietyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9640C26675BD8002509FC /* InputVarietyView.swift */; };
 		2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9640E26675BD8002509FC /* CustomTextField.swift */; };
-		2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */; };
 		2CB9641A26675BD8002509FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641126675BD8002509FC /* ContentView.swift */; };
 		2CB9641B26675BD8002509FC /* Variety.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641326675BD8002509FC /* Variety.swift */; };
 		2CB9641F26675D9E002509FC /* InputByListTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB9641D26675D9E002509FC /* InputByListTabView.swift */; };
@@ -31,8 +30,8 @@
 		F35F6E44268C89260069153E /* CheckVarietyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F6E43268C89260069153E /* CheckVarietyView.swift */; };
 		F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A43E12701450300E14763 /* VarietiesDataBase.swift */; };
 		F3E3067F2702378F003BB311 /* flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E3067E2702378F003BB311 /* flag.swift */; };
-		F3E30681271C929F003BB311 /* CheckDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30680271C929F003BB311 /* CheckDataView.swift */; };
-		F3E30683271D4792003BB311 /* CheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30682271D4792003BB311 /* CheckData.swift */; };
+		F3E30681271C929F003BB311 /* CheckServerDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30680271C929F003BB311 /* CheckServerDataView.swift */; };
+		F3E30683271D4792003BB311 /* ServerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30682271D4792003BB311 /* ServerData.swift */; };
 		F3E30685271DC10E003BB311 /* GetCheckDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30684271DC10E003BB311 /* GetCheckDataView.swift */; };
 		F3E30687271E105C003BB311 /* LoadingPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30686271E105C003BB311 /* LoadingPeriod.swift */; };
 		F3E30689271E6730003BB311 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30688271E6730003BB311 /* ConfigView.swift */; };
@@ -50,7 +49,6 @@
 		2CB9640A26675BD8002509FC /* varieties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = varieties.json; sourceTree = "<group>"; };
 		2CB9640C26675BD8002509FC /* InputVarietyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputVarietyView.swift; sourceTree = "<group>"; };
 		2CB9640E26675BD8002509FC /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		2CB9641126675BD8002509FC /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CB9641326675BD8002509FC /* Variety.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variety.swift; sourceTree = "<group>"; };
 		2CB9641D26675D9E002509FC /* InputByListTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputByListTabView.swift; sourceTree = "<group>"; };
@@ -66,8 +64,8 @@
 		F35F6E43268C89260069153E /* CheckVarietyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVarietyView.swift; sourceTree = "<group>"; };
 		F36A43E12701450300E14763 /* VarietiesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarietiesDataBase.swift; sourceTree = "<group>"; };
 		F3E3067E2702378F003BB311 /* flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flag.swift; sourceTree = "<group>"; };
-		F3E30680271C929F003BB311 /* CheckDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDataView.swift; sourceTree = "<group>"; };
-		F3E30682271D4792003BB311 /* CheckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckData.swift; sourceTree = "<group>"; };
+		F3E30680271C929F003BB311 /* CheckServerDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckServerDataView.swift; sourceTree = "<group>"; };
+		F3E30682271D4792003BB311 /* ServerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerData.swift; sourceTree = "<group>"; };
 		F3E30684271DC10E003BB311 /* GetCheckDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCheckDataView.swift; sourceTree = "<group>"; };
 		F3E30686271E105C003BB311 /* LoadingPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPeriod.swift; sourceTree = "<group>"; };
 		F3E30688271E6730003BB311 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
@@ -138,17 +136,16 @@
 		2CB9640B26675BD8002509FC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2CB9641C26675D9E002509FC /* TabView */,
+				2CB9641126675BD8002509FC /* ContentView.swift */,
+				F3E30688271E6730003BB311 /* ConfigView.swift */,
+				F3E30684271DC10E003BB311 /* GetCheckDataView.swift */,
+				F3E30680271C929F003BB311 /* CheckServerDataView.swift */,
 				2CB9640C26675BD8002509FC /* InputVarietyView.swift */,
+				2CB9641C26675D9E002509FC /* TabView */,
 				F35F6E43268C89260069153E /* CheckVarietyView.swift */,
 				F34FBE1026CD881E00732FE1 /* ScaleDataListView.swift */,
 				F34FBE1226CDC94300732FE1 /* SendDataToServerView.swift */,
-				2CB9641126675BD8002509FC /* ContentView.swift */,
-				F3E30688271E6730003BB311 /* ConfigView.swift */,
-				F3E30680271C929F003BB311 /* CheckDataView.swift */,
-				F3E30684271DC10E003BB311 /* GetCheckDataView.swift */,
 				2CB9640E26675BD8002509FC /* CustomTextField.swift */,
-				2CB9641026675BD8002509FC /* LoadingIndicatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,7 +158,7 @@
 				F34FBE0C26CD767D00732FE1 /* Scale_Data.swift */,
 				F3E3068A27272646003BB311 /* SelectedScaleData.swift */,
 				F3E3067E2702378F003BB311 /* flag.swift */,
-				F3E30682271D4792003BB311 /* CheckData.swift */,
+				F3E30682271D4792003BB311 /* ServerData.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -318,17 +315,16 @@
 				F34FBE0D26CD767D00732FE1 /* Scale_Data.swift in Sources */,
 				F34FBE1126CD881E00732FE1 /* ScaleDataListView.swift in Sources */,
 				F3E30685271DC10E003BB311 /* GetCheckDataView.swift in Sources */,
-				2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */,
 				F3E30687271E105C003BB311 /* LoadingPeriod.swift in Sources */,
 				F3E3068B27272647003BB311 /* SelectedScaleData.swift in Sources */,
 				2CB963F8266742A3002509FC /* SceneDelegate.swift in Sources */,
 				2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */,
-				F3E30683271D4792003BB311 /* CheckData.swift in Sources */,
+				F3E30683271D4792003BB311 /* ServerData.swift in Sources */,
 				F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */,
 				2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */,
 				2CD6F70E266CACC80034B1CD /* Times.swift in Sources */,
 				F3E3067F2702378F003BB311 /* flag.swift in Sources */,
-				F3E30681271C929F003BB311 /* CheckDataView.swift in Sources */,
+				F3E30681271C929F003BB311 /* CheckServerDataView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

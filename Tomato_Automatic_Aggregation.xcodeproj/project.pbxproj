@@ -37,6 +37,7 @@
 		F3E30685271DC10E003BB311 /* GetCheckDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30684271DC10E003BB311 /* GetCheckDataView.swift */; };
 		F3E30687271E105C003BB311 /* LoadingPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30686271E105C003BB311 /* LoadingPeriod.swift */; };
 		F3E30689271E6730003BB311 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30688271E6730003BB311 /* ConfigView.swift */; };
+		F3E3068B27272647003BB311 /* SelectedScaleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E3068A27272646003BB311 /* SelectedScaleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		F3E30684271DC10E003BB311 /* GetCheckDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCheckDataView.swift; sourceTree = "<group>"; };
 		F3E30686271E105C003BB311 /* LoadingPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPeriod.swift; sourceTree = "<group>"; };
 		F3E30688271E6730003BB311 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		F3E3068A27272646003BB311 /* SelectedScaleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedScaleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				F36A43E12701450300E14763 /* VarietiesDataBase.swift */,
 				2CB9641326675BD8002509FC /* Variety.swift */,
 				F34FBE0C26CD767D00732FE1 /* Scale_Data.swift */,
+				F3E3068A27272646003BB311 /* SelectedScaleData.swift */,
 				F3E3067E2702378F003BB311 /* flag.swift */,
 				F3E30682271D4792003BB311 /* CheckData.swift */,
 			);
@@ -321,6 +324,7 @@
 				F3E30685271DC10E003BB311 /* GetCheckDataView.swift in Sources */,
 				2CB9641926675BD8002509FC /* LoadingIndicatorView.swift in Sources */,
 				F3E30687271E105C003BB311 /* LoadingPeriod.swift in Sources */,
+				F3E3068B27272647003BB311 /* SelectedScaleData.swift in Sources */,
 				2CB963F8266742A3002509FC /* SceneDelegate.swift in Sources */,
 				2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */,
 				F3E30683271D4792003BB311 /* CheckData.swift in Sources */,

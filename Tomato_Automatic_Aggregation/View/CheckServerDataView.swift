@@ -8,13 +8,13 @@
 import SwiftUI
 import Combine
 
-struct CheckDataView: View {
+struct CheckServerDataView: View {
     // Reloaderのインスタンス作成
     @ObservedObject var reloader = Reloader()
     // シートが開いている状態
     @Binding var isPresented: Bool
 
-     var TomatoData: [CheckData]
+     var TomatoData: [ServerData]
 
     
     
@@ -47,7 +47,7 @@ struct CheckDataView: View {
 }
 
 struct Rows: View {
-    let TomatoData: CheckData
+    let TomatoData: ServerData
     
     var body: some View {
         VStack {
@@ -69,7 +69,7 @@ struct Rows: View {
 }
 
 struct DetailDataHeader: View {
-    let TomatoData: CheckData
+    let TomatoData: ServerData
     @State var isExpanded: Bool = false
     var body: some View {
         VStack(alignment: .leading) {

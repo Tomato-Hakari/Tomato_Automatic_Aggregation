@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CheckData: Codable {
+struct ServerData: Codable {
     var adddatetime: String
     var varietyID: String
     var scion: String?

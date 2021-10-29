@@ -30,7 +30,6 @@
 		F34FBE1326CDC94300732FE1 /* SendDataToServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34FBE1226CDC94300732FE1 /* SendDataToServerView.swift */; };
 		F35F6E44268C89260069153E /* CheckVarietyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35F6E43268C89260069153E /* CheckVarietyView.swift */; };
 		F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A43E12701450300E14763 /* VarietiesDataBase.swift */; };
-		F3A798C6269AAD3B0031F12C /* scaledata.json in Resources */ = {isa = PBXBuildFile; fileRef = F3A798C5269AAD3B0031F12C /* scaledata.json */; };
 		F3E3067F2702378F003BB311 /* flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E3067E2702378F003BB311 /* flag.swift */; };
 		F3E30681271C929F003BB311 /* CheckDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30680271C929F003BB311 /* CheckDataView.swift */; };
 		F3E30683271D4792003BB311 /* CheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30682271D4792003BB311 /* CheckData.swift */; };
@@ -66,7 +65,6 @@
 		F34FBE1226CDC94300732FE1 /* SendDataToServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDataToServerView.swift; sourceTree = "<group>"; };
 		F35F6E43268C89260069153E /* CheckVarietyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVarietyView.swift; sourceTree = "<group>"; };
 		F36A43E12701450300E14763 /* VarietiesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarietiesDataBase.swift; sourceTree = "<group>"; };
-		F3A798C5269AAD3B0031F12C /* scaledata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = scaledata.json; sourceTree = "<group>"; };
 		F3E3067E2702378F003BB311 /* flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flag.swift; sourceTree = "<group>"; };
 		F3E30680271C929F003BB311 /* CheckDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDataView.swift; sourceTree = "<group>"; };
 		F3E30682271D4792003BB311 /* CheckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckData.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				2CB9640A26675BD8002509FC /* varieties.json */,
-				F3A798C5269AAD3B0031F12C /* scaledata.json */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -276,7 +273,6 @@
 				2CB963FF266742A5002509FC /* Preview Assets.xcassets in Resources */,
 				2CB9641426675BD8002509FC /* varieties.json in Resources */,
 				2CB963FC266742A5002509FC /* Assets.xcassets in Resources */,
-				F3A798C6269AAD3B0031F12C /* scaledata.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

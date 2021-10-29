@@ -166,7 +166,7 @@ struct SendDataToServerView: View {
         }
         .onDisappear {
             if isSuccess {
-                flag.isSuccessed = true
+                flag.isSuccessedSendings = true
             }
         }
         

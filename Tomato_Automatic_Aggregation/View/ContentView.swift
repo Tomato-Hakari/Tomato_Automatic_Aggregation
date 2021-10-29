@@ -45,7 +45,7 @@ struct ContentView: View {
                 }
                 Spacer()
                
-                if flag.isSuccessed {
+                if flag.isSuccessedSendings {
                     Text("データの送信に成功しました!")
                         .font(.system(size: 30))
                         .foregroundColor(.orange)
@@ -54,7 +54,7 @@ struct ContentView: View {
                 
                 HStack{
                     Button(action: {
-                        flag.isSuccessed = false
+                        flag.isSuccessedSendings = false
                         isShowCheckView = true
                     }) {
                         Text("データ確認")
@@ -70,7 +70,7 @@ struct ContentView: View {
                     .padding()
                     
                     Button(action: {
-                        flag.isSuccessed = false
+                        flag.isSuccessedSendings = false
                         isShowInputView = true
                     }) {
                         Text("データ入力")
@@ -87,7 +87,7 @@ struct ContentView: View {
                 }
                 
                 Button(action: {
-                    flag.isSuccessed = false
+                    flag.isSuccessedSendings = false
                     isShowConfigView = true
                 }) {
                     Text("設定")

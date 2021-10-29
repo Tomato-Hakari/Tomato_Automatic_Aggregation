@@ -14,7 +14,7 @@ struct GetCheckDataView: View {
     
     @State var result: String = ""
     
-    @State var TomatoData = [CheckData]()
+    @State var TomatoData = [ServerData]()
     
     @State var isTomatoDataIn: Bool = false
     /// データ読み込み処理
@@ -40,7 +40,7 @@ struct GetCheckDataView: View {
                     result = stringdata
                     if result != "[]" {
                         let decoder = JSONDecoder()
-                        TomatoData = try! decoder.decode([CheckData].self, from: result.data(using: .utf8)!)
+                        TomatoData = try! decoder.decode([ServerData].self, from: result.data(using: .utf8)!)
                         if !TomatoData[0].adddatetime.isEmpty {
                             result = ""
                             isTomatoDataIn = true
@@ -59,7 +59,7 @@ struct GetCheckDataView: View {
         NavigationView{
             ZStack{
                 VStack{
-                    NavigationLink(destination: CheckDataView(isPresented: $isPresented, TomatoData: TomatoData), isActive: $isTomatoDataIn) {
+                    NavigationLink(destination: CheckServerDataView(isPresented: $isPresented, TomatoData: TomatoData), isActive: $isTomatoDataIn) {
                         EmptyView()
                     }
                     .navigationTitle(Text("読み込み中"))

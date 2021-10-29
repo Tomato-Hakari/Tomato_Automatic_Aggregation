@@ -6,12 +6,10 @@
 //
 
 import Foundation
-import UIKit
-
 
 let Varieties: [VarietiesDataBase] = Bundle.main.decodeJSON(file: "varieties.json")
 
-class DataManagement: NSObject {
+class DataManagement {
 
     // 品種IDにより入力する品種を決定
     class func EnterInputData(ID id:String) {

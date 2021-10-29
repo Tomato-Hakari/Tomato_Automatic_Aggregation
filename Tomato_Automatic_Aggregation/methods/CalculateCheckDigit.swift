@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import UIKit
 
-class CalculateCheckDigit: NSObject{
+class CalculateCheckDigit {
     // チェックデジットを計算し、誤りがあればtrue、誤りがなければfalseを返す
     class func isErrorInBarcode(_ code: String) -> Bool {
         // ITFコードの桁数

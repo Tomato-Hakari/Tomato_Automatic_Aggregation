@@ -14,14 +14,14 @@ class DataManagement {
     // 品種IDにより入力する品種を決定
     class func EnterInputData(ID id:String) {
         print("EnterData:ID")
-        for num in 0..<Varieties.count {
-            if Varieties[num].id == id {
-                Variety.InputVarietyID = Varieties[num].id
-                Variety.InputVarietyScionName = Varieties[num].scion_name
-                Variety.InputVarietyScionShort = Varieties[num].scion_short
-                Variety.InputVarietyRootstockName = Varieties[num].rootstock_name
-                Variety.isInputVarietysYieldSurvey = Varieties[num].isYieldSurvey
-                Variety.InputVarietyRemarks = Varieties[num].remarks
+        for Var in Varieties {
+            if Var.id == id {
+                Variety.InputVarietyID = Var.id
+                Variety.InputVarietyScionName = Var.scion_name
+                Variety.InputVarietyScionShort = Var.scion_short
+                Variety.InputVarietyRootstockName = Var.rootstock_name
+                Variety.isInputVarietysYieldSurvey = Var.isYieldSurvey
+                Variety.InputVarietyRemarks = Var.remarks
                 return
             }
         }
@@ -53,9 +53,9 @@ class DataManagement {
         var dataArray: [String] = []
         var editString: String = ""
         
-        for num in 0..<Varieties.count {
+        for Var in Varieties {
             editString = ""
-            editString = MakeVarietyViewName(Scion: Varieties[num].scion_name, Rootstock: Varieties[num].rootstock_name, Remarks: Varieties[num].remarks)
+            editString = MakeVarietyViewName(Scion: Var.scion_name, Rootstock: Var.rootstock_name, Remarks: Var.remarks)
             dataArray.append(editString)
         }
         
@@ -93,9 +93,9 @@ class DataManagement {
     
     // 品種IDから対応する品種名を返す
     class func VarietyIDtoName(ID id:String) -> String {
-        for num in 0..<Varieties.count {
-            if id == Varieties[num].id {
-                return MakeVarietyViewName(Scion: Varieties[num].scion_name, Rootstock: Varieties[num].rootstock_name, Remarks: Varieties[num].remarks)
+        for Var in Varieties {
+            if id == Var.id {
+                return MakeVarietyViewName(Scion: Var.scion_name, Rootstock: Var.rootstock_name, Remarks: Var.remarks)
             }
         }
         return ""

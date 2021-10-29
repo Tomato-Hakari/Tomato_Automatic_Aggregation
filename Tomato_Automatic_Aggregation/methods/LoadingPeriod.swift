@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// 読み込み中のアニメーション(ピリオドの表示数を０~3個の順にループする)を作成するクラス
 class LoadingPeriod: ObservableObject{
     @Published var timer: Timer!
     @Published var count: Int = 0

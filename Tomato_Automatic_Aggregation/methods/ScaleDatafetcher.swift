@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// heroku上に作成した自作apiから体重計から取得したデータをScale_Data型配列に格納するクラス
 class ScaleDataFetcher: ObservableObject {
     @Published var scale_datum: [Scale_Data] = []
 

@@ -17,12 +17,12 @@ class Variety: ObservableObject {
     
     // Varietyクラスの値をリセット
     class func ResetVariety() {
-        Variety.InputVarietyID = ""
-        Variety.InputVarietyScionName = ""
-        Variety.InputVarietyScionShort = ""
-        Variety.InputVarietyRootstockName = ""
-        Variety.isInputVarietysYieldSurvey = false
-        Variety.InputVarietyRemarks = ""
+        self.InputVarietyID = ""
+        self.InputVarietyScionName = ""
+        self.InputVarietyScionShort = ""
+        self.InputVarietyRootstockName = ""
+        self.isInputVarietysYieldSurvey = false
+        self.InputVarietyRemarks = ""
     }
 }
 

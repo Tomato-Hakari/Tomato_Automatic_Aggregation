@@ -16,12 +16,8 @@ struct CheckVarietyView: View {
     
     var body: some View {
         VStack{
-            Button("Health Planet アプリへ遷移(収量データ送信)"){
-                UIApplication.shared.open(HealthPlanetURL!, options: [.universalLinksOnly: false], completionHandler: { completed in
-                    print(completed)
-                })
-            }
-            .padding()
+            Link("Health Planet アプリへ遷移(収量データ送信)", destination: HealthPlanetURL!)
+                .padding()
             HStack(){
                 Text("品種ID：" + Variety.InputVarietyID)
                 Spacer()

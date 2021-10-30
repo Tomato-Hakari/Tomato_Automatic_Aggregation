@@ -14,9 +14,6 @@ struct CheckVarietyView: View {
     // HealthPlanetアプリのURL
     let HealthPlanetURL = URL(string: "healthplanet://")
     
-    // apiscaleのURL
-    let apiscaleURL = URL(string: "https://apiscale.herokuapp.com")
-    
     var body: some View {
         VStack{
             Button("Health Planet アプリへ遷移(収量データ送信)"){

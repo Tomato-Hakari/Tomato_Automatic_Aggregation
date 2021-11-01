@@ -13,6 +13,7 @@ class LoadingPeriod: ObservableObject{
     @Published var timer: Timer!
     @Published var count: Int = 0
     @Published var period: String = ""
+    @Published var isLoading: Bool = false
     private let max: Int = 3
 
 
@@ -21,6 +22,7 @@ class LoadingPeriod: ObservableObject{
         self.timer?.invalidate()
         // count初期化
         self.count = 0
+        self.isLoading = true
         // Timer取得
         self.timer = Timer.scheduledTimer(withTimeInterval:0.5, repeats: true){ _ in
             self.period = ""
@@ -37,5 +39,6 @@ class LoadingPeriod: ObservableObject{
     func stop(){
         timer?.invalidate()
         timer = nil
+        self.isLoading = false
     }
 }

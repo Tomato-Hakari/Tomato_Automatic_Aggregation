@@ -23,9 +23,12 @@ struct ConfigView: View {
                         }
                     }
                     .environment(\.editMode, .constant(.active))
-                    .onChange(of: selectedMode){ value in
-                        if (value != nil) {
-                            flag.currentmode = flag.modes[value!]
+                    .onChange(of: selectedMode){ [selectedMode] newvalue in
+                        if (newvalue != nil) {
+                            flag.currentmode = flag.modes[newvalue!]
+                            flag.currentmodeNum = newvalue!
+                        } else {
+                            self.selectedMode = selectedMode
                         }
                     }
                 }
@@ -39,6 +42,9 @@ struct ConfigView: View {
                         }
                     }
                 }
+            }
+            .onAppear {
+                self.selectedMode = flag.currentmodeNum
             }
         }
     }

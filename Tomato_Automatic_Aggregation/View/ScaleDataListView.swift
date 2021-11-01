@@ -36,7 +36,7 @@ struct ScaleDataListView: View {
             }
             ZStack{
                 GroupBox(label:VStack{
-                    Text("適切な収量を選択")
+                    Text("「\(DataManagement.MakeInputVarietyViewName())」の適切な収量を選択")
                     HStack{
                         Text("表示する期間を選択→")
                         Picker(selection: $selectedPeriod, label: Text(""), content: {
@@ -46,6 +46,7 @@ struct ScaleDataListView: View {
                             }
                         })
                             .pickerStyle(SegmentedPickerStyle())
+                            .disabled(period.isLoading)
                     }
                 } ) {
                     List(selection: $selectedNumbers) {
@@ -72,6 +73,18 @@ struct ScaleDataListView: View {
                         .onDisappear{
                             period.stop()
                         }
+                } else if scaledata.isHerokuDown {
+                    VStack {
+                        Group {
+                            Text("データ取得に失敗しました")
+                                .font(.system(size: 50))
+                                .foregroundColor(.red)
+                            Text("ひとつ前の画面に戻ってください")
+                                .font(.system(size: 20))
+                        }
+                        .multilineTextAlignment(.leading)
+                        .frame(width: 300.0)
+                    }
                 } else if hiddendatas == scaledata.scale_datum.count {
                     Text("データがありません")
                         .font(.system(size: 50))
@@ -98,6 +111,7 @@ struct ScaleDataListView: View {
                         isButtonActive = true
                     }
                 }
+                .disabled(period.isLoading)
             }
         }
         .onAppear {
@@ -105,5 +119,11 @@ struct ScaleDataListView: View {
             scaledata.load()
             selectedScaleData.removeAll()
         }
+    }
+}
+
+struct ScaleDataListView_Previews: PreviewProvider {
+    static var previews: some View {
+        ScaleDataListView(isPresented: Binding.constant(false))
     }
 }

@@ -16,6 +16,8 @@ struct ContentView: View {
     @State var isShowCheckView: Bool = false
     // 設定画面が表示されているか
     @State var isShowConfigView: Bool = false
+    // アップデート情報画面が表示されているか
+    @State var isShowUpdateInfoView: Bool = false
     // アラート表示用フラグ
     @State var alertFlag = false
     
@@ -93,8 +95,8 @@ struct ContentView: View {
                     Text("設定")
                         .frame(width: 150, height: 100)
                         .font(.system(size: 50))
-                                        .font(.largeTitle)
-                                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
                 }
                 .sheet(isPresented: $isShowConfigView){
                    ConfigView(isPresented: self.$isShowConfigView)
@@ -104,6 +106,24 @@ struct ContentView: View {
                 
                 
                 Spacer()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        flag.isSuccessedSendings = false
+                        isShowUpdateInfoView = true
+                    }) {
+                        Text("アップデート情報")
+                            .frame(width: 270, height: 60)
+                            .font(.system(size: 30))
+                            .font(.title)
+                            .foregroundColor(.white)
+                    }
+                    .sheet(isPresented: $isShowUpdateInfoView){
+                       UpdateInfoView(isPresented: self.$isShowUpdateInfoView)
+                    }
+                    .background(Color.blue)
+                    .padding()
+                }
             }
             .onAppear {
                 reloader.start()

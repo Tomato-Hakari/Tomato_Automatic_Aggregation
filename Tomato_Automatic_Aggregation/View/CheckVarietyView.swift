@@ -16,22 +16,25 @@ struct CheckVarietyView: View {
     
     var body: some View {
         VStack{
-            Link("Health Planet アプリへ遷移(収量データ送信)", destination: HealthPlanetURL!)
+            Text("品種名: \(DataManagement.MakeInputVarietyViewName())")
+                .font(.system(size: 25))
+                .background(Color.yellow)
+                .foregroundColor(.black)
                 .padding()
-            HStack(){
-                Text("品種ID：" + Variety.InputVarietyID)
-                Spacer()
+            Button(action: {
+                UIApplication.shared.open(HealthPlanetURL!)
+            }) {
+                HealthPlanetButtonView()
+                    .frame(width: 400)
             }
-            .frame(width: 250.0)
-            
-            HStack(){
-                Text("品種名：" + DataManagement.MakeInputVarietyViewName())
-                Spacer()
-            }.frame(width: 250.0)
             
             NavigationLink("収量データ表示",
                 destination: ScaleDataListView(isPresented: $isPresented))
-            .padding()
+                .font(.title)
+                .padding()
+                .frame(width: 400, alignment: .center)
+                .border(Color.black)
+                .padding()
         }
         .padding()
         .navigationBarTitle("品種確認・収量取得準備")

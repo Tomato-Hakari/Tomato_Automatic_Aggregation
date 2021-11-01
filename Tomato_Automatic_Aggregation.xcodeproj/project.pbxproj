@@ -23,6 +23,10 @@
 		2CD6F70E266CACC80034B1CD /* Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD6F70D266CACC80034B1CD /* Times.swift */; };
 		2CF767222668A3FF008096B0 /* GeneralizationJSONDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF767212668A3FF008096B0 /* GeneralizationJSONDecode.swift */; };
 		2CF76724266BA890008096B0 /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF76723266BA890008096B0 /* DataManagement.swift */; };
+		F344DE4A272FEAC600BAFFE5 /* HealthPlanetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344DE49272FEAC600BAFFE5 /* HealthPlanetButtonView.swift */; };
+		F344DE4C2730096600BAFFE5 /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344DE4B2730096600BAFFE5 /* UpdateInfoView.swift */; };
+		F344DE5027300BB600BAFFE5 /* UpdateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344DE4F27300BB600BAFFE5 /* UpdateInfo.swift */; };
+		F344DE532730141E00BAFFE5 /* Update_2021_11_02.txt in Resources */ = {isa = PBXBuildFile; fileRef = F344DE522730141E00BAFFE5 /* Update_2021_11_02.txt */; };
 		F34FBE0D26CD767D00732FE1 /* Scale_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34FBE0C26CD767D00732FE1 /* Scale_Data.swift */; };
 		F34FBE0F26CD789800732FE1 /* ScaleDatafetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34FBE0E26CD789800732FE1 /* ScaleDatafetcher.swift */; };
 		F34FBE1126CD881E00732FE1 /* ScaleDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34FBE1026CD881E00732FE1 /* ScaleDataListView.swift */; };
@@ -57,6 +61,10 @@
 		2CD6F70D266CACC80034B1CD /* Times.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Times.swift; sourceTree = "<group>"; };
 		2CF767212668A3FF008096B0 /* GeneralizationJSONDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralizationJSONDecode.swift; sourceTree = "<group>"; };
 		2CF76723266BA890008096B0 /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
+		F344DE49272FEAC600BAFFE5 /* HealthPlanetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthPlanetButtonView.swift; sourceTree = "<group>"; };
+		F344DE4B2730096600BAFFE5 /* UpdateInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfoView.swift; sourceTree = "<group>"; };
+		F344DE4F27300BB600BAFFE5 /* UpdateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateInfo.swift; sourceTree = "<group>"; };
+		F344DE522730141E00BAFFE5 /* Update_2021_11_02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Update_2021_11_02.txt; sourceTree = "<group>"; };
 		F34FBE0C26CD767D00732FE1 /* Scale_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale_Data.swift; sourceTree = "<group>"; };
 		F34FBE0E26CD789800732FE1 /* ScaleDatafetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDatafetcher.swift; sourceTree = "<group>"; };
 		F34FBE1026CD881E00732FE1 /* ScaleDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleDataListView.swift; sourceTree = "<group>"; };
@@ -128,6 +136,7 @@
 		2CB9640926675BD8002509FC /* data */ = {
 			isa = PBXGroup;
 			children = (
+				F344DE512730141E00BAFFE5 /* Updates */,
 				2CB9640A26675BD8002509FC /* varieties.json */,
 			);
 			path = data;
@@ -138,6 +147,7 @@
 			children = (
 				2CB9641126675BD8002509FC /* ContentView.swift */,
 				F3E30688271E6730003BB311 /* ConfigView.swift */,
+				F344DE4B2730096600BAFFE5 /* UpdateInfoView.swift */,
 				F3E30684271DC10E003BB311 /* GetCheckDataView.swift */,
 				F3E30680271C929F003BB311 /* CheckServerDataView.swift */,
 				2CB9640C26675BD8002509FC /* InputVarietyView.swift */,
@@ -146,6 +156,7 @@
 				F34FBE1026CD881E00732FE1 /* ScaleDataListView.swift */,
 				F34FBE1226CDC94300732FE1 /* SendDataToServerView.swift */,
 				2CB9640E26675BD8002509FC /* CustomTextField.swift */,
+				F344DE49272FEAC600BAFFE5 /* HealthPlanetButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,8 +191,17 @@
 				2CD6F70D266CACC80034B1CD /* Times.swift */,
 				F3E30686271E105C003BB311 /* LoadingPeriod.swift */,
 				F34FBE0E26CD789800732FE1 /* ScaleDatafetcher.swift */,
+				F344DE4F27300BB600BAFFE5 /* UpdateInfo.swift */,
 			);
 			path = methods;
+			sourceTree = "<group>";
+		};
+		F344DE512730141E00BAFFE5 /* Updates */ = {
+			isa = PBXGroup;
+			children = (
+				F344DE522730141E00BAFFE5 /* Update_2021_11_02.txt */,
+			);
+			path = Updates;
 			sourceTree = "<group>";
 		};
 		F378E4F1269F5083005DF531 /* extentions */ = {
@@ -269,6 +289,7 @@
 				2CB96402266742A5002509FC /* LaunchScreen.storyboard in Resources */,
 				2CB963FF266742A5002509FC /* Preview Assets.xcassets in Resources */,
 				2CB9641426675BD8002509FC /* varieties.json in Resources */,
+				F344DE532730141E00BAFFE5 /* Update_2021_11_02.txt in Resources */,
 				2CB963FC266742A5002509FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,8 +331,10 @@
 				2CB9641A26675BD8002509FC /* ContentView.swift in Sources */,
 				2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */,
 				2CF767222668A3FF008096B0 /* GeneralizationJSONDecode.swift in Sources */,
+				F344DE4A272FEAC600BAFFE5 /* HealthPlanetButtonView.swift in Sources */,
 				2CB9641B26675BD8002509FC /* Variety.swift in Sources */,
 				2CF76724266BA890008096B0 /* DataManagement.swift in Sources */,
+				F344DE5027300BB600BAFFE5 /* UpdateInfo.swift in Sources */,
 				F34FBE0D26CD767D00732FE1 /* Scale_Data.swift in Sources */,
 				F34FBE1126CD881E00732FE1 /* ScaleDataListView.swift in Sources */,
 				F3E30685271DC10E003BB311 /* GetCheckDataView.swift in Sources */,
@@ -323,6 +346,7 @@
 				F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */,
 				2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */,
 				2CD6F70E266CACC80034B1CD /* Times.swift in Sources */,
+				F344DE4C2730096600BAFFE5 /* UpdateInfoView.swift in Sources */,
 				F3E3067F2702378F003BB311 /* flag.swift in Sources */,
 				F3E30681271C929F003BB311 /* CheckServerDataView.swift in Sources */,
 			);
@@ -461,6 +485,7 @@
 		2CB96407266742A5002509FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -468,11 +493,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato_Automatic_Aggregation/Preview Content\"";
 				DEVELOPMENT_TEAM = GH5R2PKU3W;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tomato_Automatic_Aggregation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,6 +512,7 @@
 		2CB96408266742A5002509FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -498,11 +520,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Tomato_Automatic_Aggregation/Preview Content\"";
 				DEVELOPMENT_TEAM = GH5R2PKU3W;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Tomato_Automatic_Aggregation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (

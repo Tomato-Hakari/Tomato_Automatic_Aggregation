@@ -164,6 +164,7 @@
 		2CB9641226675BD8002509FC /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				F344DE4F27300BB600BAFFE5 /* UpdateInfo.swift */,
 				F36A43E12701450300E14763 /* VarietiesDataBase.swift */,
 				2CB9641326675BD8002509FC /* Variety.swift */,
 				F34FBE0C26CD767D00732FE1 /* Scale_Data.swift */,
@@ -191,7 +192,6 @@
 				2CD6F70D266CACC80034B1CD /* Times.swift */,
 				F3E30686271E105C003BB311 /* LoadingPeriod.swift */,
 				F34FBE0E26CD789800732FE1 /* ScaleDatafetcher.swift */,
-				F344DE4F27300BB600BAFFE5 /* UpdateInfo.swift */,
 			);
 			path = methods;
 			sourceTree = "<group>";

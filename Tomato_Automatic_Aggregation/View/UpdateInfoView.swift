@@ -11,13 +11,19 @@ struct UpdateInfoView: View {
     // シートが開いている状態
     @Binding var isPresented: Bool
     
-    @State var updateinfo20211102 = UpdateInfo(fileName: "Update_2021_11_02")
+    @State var updateinfo: [UpdateInfo] = [
+    UpdateInfo(fileName: "Update_2021_11_02", dateStr: "2021/11/02", dateformat: "yyyy/MM/dd")
+    ]
+    
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("2021/11/02")) {
-                    Text(updateinfo20211102.info)
+                ForEach(updateinfo) { value in
+                    Section(header: Text(value.getDate())) {
+                        Text(value.info)
+                    }
                 }
+                
             }
             .border(Color.black)
             .padding()

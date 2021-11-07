@@ -30,7 +30,20 @@ class UpdateInfo: ObservableObject, Identifiable {
         self.info = fileContents
     }
     
-    func getDate() -> String {
-        return DataManagement.StringFromDate(date: date, format: "yyyy/MM/dd")
+    func getDateString(format: String) -> String {
+        return DataManagement.StringFromDate(date: date, format: format)
+    }
+    
+    func getDate() -> Date {
+        return self.date
+    }
+}
+
+extension UpdateInfo {
+    class func getUpdateInfo() -> [UpdateInfo] {
+        return [
+            UpdateInfo(fileName: "2021_11_02", dateStr: "2021_11_02", dateformat: "yyyy_MM_dd"),
+            UpdateInfo(fileName: "2021_11_09", dateStr: "2021_11_09", dateformat: "yyyy_MM_dd")
+        ]
     }
 }

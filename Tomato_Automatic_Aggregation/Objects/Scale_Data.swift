@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Scale_Data: Decodable, Identifiable {
+struct Scale_Data: Decodable, Identifiable, Hashable {
     var id: Int
     var date: String
     var weight: String
@@ -15,6 +15,8 @@ struct Scale_Data: Decodable, Identifiable {
     var tag: String
     var created_at: String
     var updated_at: String
+    var isDelete: Bool
+    var Checked: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -24,5 +26,6 @@ struct Scale_Data: Decodable, Identifiable {
         case tag = "tag"
         case created_at = "created_at"
         case updated_at = "updated_at"
+        case isDelete = "isDelete"
     }
 }

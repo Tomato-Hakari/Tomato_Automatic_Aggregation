@@ -36,6 +36,7 @@
 		F3BF509927353AFF00721577 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF509827353AFF00721577 /* TextFieldAlert.swift */; };
 		F3BF50B02737870600721577 /* 2021_11_02.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3BF50AF2737870600721577 /* 2021_11_02.txt */; };
 		F3BF50B22737872A00721577 /* 2021_11_09.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3BF50B12737872A00721577 /* 2021_11_09.txt */; };
+		F3BF50CE2737FDD300721577 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF50CD2737FDD300721577 /* Color.swift */; };
 		F3E3067F2702378F003BB311 /* flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E3067E2702378F003BB311 /* flag.swift */; };
 		F3E30681271C929F003BB311 /* CheckServerDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30680271C929F003BB311 /* CheckServerDataView.swift */; };
 		F3E30683271D4792003BB311 /* ServerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E30682271D4792003BB311 /* ServerData.swift */; };
@@ -77,6 +78,7 @@
 		F3BF509827353AFF00721577 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
 		F3BF50AF2737870600721577 /* 2021_11_02.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2021_11_02.txt; sourceTree = "<group>"; };
 		F3BF50B12737872A00721577 /* 2021_11_09.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2021_11_09.txt; sourceTree = "<group>"; };
+		F3BF50CD2737FDD300721577 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F3E3067E2702378F003BB311 /* flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flag.swift; sourceTree = "<group>"; };
 		F3E30680271C929F003BB311 /* CheckServerDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckServerDataView.swift; sourceTree = "<group>"; };
 		F3E30682271D4792003BB311 /* ServerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerData.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				2CF767212668A3FF008096B0 /* GeneralizationJSONDecode.swift */,
+				F3BF50CD2737FDD300721577 /* Color.swift */,
 			);
 			path = extentions;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				F3BF509927353AFF00721577 /* TextFieldAlert.swift in Sources */,
 				2CB9641726675BD8002509FC /* CustomTextField.swift in Sources */,
 				F3E30683271D4792003BB311 /* ServerData.swift in Sources */,
+				F3BF50CE2737FDD300721577 /* Color.swift in Sources */,
 				F36A43E22701450300E14763 /* VarietiesDataBase.swift in Sources */,
 				2CB9642326686ABD002509FC /* CalculateCheckDigit.swift in Sources */,
 				2CD6F70E266CACC80034B1CD /* Times.swift in Sources */,

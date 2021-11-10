@@ -51,11 +51,7 @@ struct ScaleDataListView: View {
                 } ) {
                     List(selection: $selectedNumbers) {
                         ForEach(0..<scaledata.scale_datum.count, id:\.self) { index in
-                            if selectedPeriod == 0 &&  DataManagement.isToday(dateString: scaledata.scale_datum[index].date, format: "yyyyMMddHHmm") {
-                                Text("\(DataManagement.ProcessDate(DateString: scaledata.scale_datum[index].date)) \(scaledata.scale_datum[index].weight)kg")
-                            } else if selectedPeriod == 1 && DataManagement.isTomonth(dateString: scaledata.scale_datum[index].date, format: "yyyyMMddHHmm") {
-                                Text("\(DataManagement.ProcessDate(DateString: scaledata.scale_datum[index].date)) \(scaledata.scale_datum[index].weight)kg")
-                            } else if selectedPeriod == 2 {
+                            if (selectedPeriod == 0 &&  DataManagement.isToday(dateString: scaledata.scale_datum[index].date, format: "yyyyMMddHHmm")) ||  (selectedPeriod == 2) {
                                 Text("\(DataManagement.ProcessDate(DateString: scaledata.scale_datum[index].date)) \(scaledata.scale_datum[index].weight)kg")
                             }
                         }
@@ -119,6 +115,31 @@ struct ScaleDataListView: View {
             scaledata.load()
             selectedScaleData.removeAll()
         }
+    }
+    
+    func delete(offsets: IndexSet) {
+        let id = scaledata.scale_datum[offsets.first!].id
+        guard let url = URL(string: "https://scaleapi.herokuapp.com/scale_data/\(id)") else {
+            fatalError("URL生成エラー")
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.httpBody = "isDelete=faise".data(using: .utf8)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else {
+                return
+            }
+            do {
+                let deletedScaleData = try JSONDecoder().decode(Scale_Data.self, from: data)
+                if deletedScaleData.id != id {
+                    return
+                }
+            } catch let error {
+                print(error)
+            }
+        }.resume()
+        scaledata.scale_datum.remove(atOffsets: offsets)
     }
 }
 

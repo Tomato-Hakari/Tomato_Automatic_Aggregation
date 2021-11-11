@@ -51,7 +51,7 @@ struct ScaleDataListView: View {
                 } ) {
                     List(selection: $selectedNumbers) {
                         ForEach(0..<scaledata.scale_datum.count, id:\.self) { index in
-                            if (selectedPeriod == 0 &&  DataManagement.isToday(dateString: scaledata.scale_datum[index].date, format: "yyyyMMddHHmm")) ||  (selectedPeriod == 2) {
+                            if (selectedPeriod == 0 &&  DataManagement.isToday(dateString: scaledata.scale_datum[index].date, format: "yyyyMMddHHmm")) || (selectedPeriod == 1 && DataManagement.isTomonth(dateString: scaledata.scale_datum[index].date, format: "yyyyMMddHHmm"))  || (selectedPeriod == 2) {
                                 Text("\(DataManagement.ProcessDate(DateString: scaledata.scale_datum[index].date)) \(scaledata.scale_datum[index].weight)kg")
                             }
                         }

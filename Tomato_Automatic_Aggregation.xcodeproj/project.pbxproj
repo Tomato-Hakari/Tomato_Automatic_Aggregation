@@ -36,7 +36,6 @@
 		F3CA34CD2743C65600F4F5A8 /* UpdateInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34B42743C65600F4F5A8 /* UpdateInfoView.swift */; };
 		F3CA34CE2743C65600F4F5A8 /* 2021_11_09.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3CA34B62743C65600F4F5A8 /* 2021_11_09.txt */; };
 		F3CA34CF2743C65600F4F5A8 /* 2021_11_02.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3CA34B72743C65600F4F5A8 /* 2021_11_02.txt */; };
-		F3CA34D32743C6B100F4F5A8 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34D22743C6B100F4F5A8 /* BarChartView.swift */; };
 		F3CA34E22743C77400F4F5A8 /* Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34D62743C77400F4F5A8 /* Times.swift */; };
 		F3CA34E32743C77400F4F5A8 /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34D72743C77400F4F5A8 /* DataManagement.swift */; };
 		F3CA34E42743C77400F4F5A8 /* flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34D92743C77400F4F5A8 /* flag.swift */; };
@@ -46,6 +45,7 @@
 		F3CA34E82743C77400F4F5A8 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34DF2743C77400F4F5A8 /* TextFieldAlert.swift */; };
 		F3CA34E92743C77400F4F5A8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34E02743C77400F4F5A8 /* CustomTextField.swift */; };
 		F3CA34EA2743C77400F4F5A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34E12743C77400F4F5A8 /* ContentView.swift */; };
+		F3CA34F92745EC7700F4F5A8 /* 2021_11_18.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3CA34F82745EC7700F4F5A8 /* 2021_11_18.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +80,6 @@
 		F3CA34B42743C65600F4F5A8 /* UpdateInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateInfoView.swift; sourceTree = "<group>"; };
 		F3CA34B62743C65600F4F5A8 /* 2021_11_09.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2021_11_09.txt; sourceTree = "<group>"; };
 		F3CA34B72743C65600F4F5A8 /* 2021_11_02.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 2021_11_02.txt; sourceTree = "<group>"; };
-		F3CA34D22743C6B100F4F5A8 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		F3CA34D62743C77400F4F5A8 /* Times.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Times.swift; sourceTree = "<group>"; };
 		F3CA34D72743C77400F4F5A8 /* DataManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
 		F3CA34D92743C77400F4F5A8 /* flag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flag.swift; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		F3CA34DF2743C77400F4F5A8 /* TextFieldAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
 		F3CA34E02743C77400F4F5A8 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F3CA34E12743C77400F4F5A8 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F3CA34F82745EC7700F4F5A8 /* 2021_11_18.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2021_11_18.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,6 @@
 		2CB963F4266742A3002509FC /* Tomato_Automatic_Aggregation */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34D02743C6B100F4F5A8 /* Graph */,
 				F3CA34A52743C65600F4F5A8 /* CheckData */,
 				F3CA34AB2743C65600F4F5A8 /* Config */,
 				F3CA34902743C65600F4F5A8 /* Register */,
@@ -181,12 +180,12 @@
 		F3CA349A2743C65600F4F5A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA349B2743C65600F4F5A8 /* SendDataToServerView.swift */,
-				F3CA349C2743C65600F4F5A8 /* CheckVarietyView.swift */,
 				F3CA349D2743C65600F4F5A8 /* InputVarietyView.swift */,
-				F3CA349E2743C65600F4F5A8 /* HealthPlanetButtonView.swift */,
 				F3CA349F2743C65600F4F5A8 /* TabView */,
+				F3CA349C2743C65600F4F5A8 /* CheckVarietyView.swift */,
 				F3CA34A22743C65600F4F5A8 /* ScaleDataListView.swift */,
+				F3CA349B2743C65600F4F5A8 /* SendDataToServerView.swift */,
+				F3CA349E2743C65600F4F5A8 /* HealthPlanetButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,24 +289,9 @@
 			children = (
 				F3CA34B62743C65600F4F5A8 /* 2021_11_09.txt */,
 				F3CA34B72743C65600F4F5A8 /* 2021_11_02.txt */,
+				F3CA34F82745EC7700F4F5A8 /* 2021_11_18.txt */,
 			);
 			path = data;
-			sourceTree = "<group>";
-		};
-		F3CA34D02743C6B100F4F5A8 /* Graph */ = {
-			isa = PBXGroup;
-			children = (
-				F3CA34D12743C6B100F4F5A8 /* View */,
-			);
-			path = Graph;
-			sourceTree = "<group>";
-		};
-		F3CA34D12743C6B100F4F5A8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F3CA34D22743C6B100F4F5A8 /* BarChartView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F3CA34D42743C77400F4F5A8 /* General */ = {
@@ -435,6 +419,7 @@
 			files = (
 				F3CA34CB2743C65600F4F5A8 /* Developer.json in Resources */,
 				2CB96402266742A5002509FC /* LaunchScreen.storyboard in Resources */,
+				F3CA34F92745EC7700F4F5A8 /* 2021_11_18.txt in Resources */,
 				F3CA34CE2743C65600F4F5A8 /* 2021_11_09.txt in Resources */,
 				2CB963FF266742A5002509FC /* Preview Assets.xcassets in Resources */,
 				F3CA34CF2743C65600F4F5A8 /* 2021_11_02.txt in Resources */,
@@ -477,7 +462,6 @@
 				F3CA34E52743C77400F4F5A8 /* ExtentionWeight.swift in Sources */,
 				F3CA34C92743C65600F4F5A8 /* GetCheckDataView.swift in Sources */,
 				2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */,
-				F3CA34D32743C6B100F4F5A8 /* BarChartView.swift in Sources */,
 				F3CA34BA2743C65600F4F5A8 /* CalculateCheckDigit.swift in Sources */,
 				F3CA34C12743C65600F4F5A8 /* InputVarietyView.swift in Sources */,
 				F3CA34C22743C65600F4F5A8 /* HealthPlanetButtonView.swift in Sources */,

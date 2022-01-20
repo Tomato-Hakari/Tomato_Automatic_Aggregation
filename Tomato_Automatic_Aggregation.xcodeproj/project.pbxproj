@@ -106,8 +106,8 @@
 		2CB963E9266742A3002509FC = {
 			isa = PBXGroup;
 			children = (
-				2CB963F4266742A3002509FC /* Tomato_Automatic_Aggregation */,
 				2CB963F3266742A3002509FC /* Products */,
+				2CB963F4266742A3002509FC /* Tomato_Automatic_Aggregation */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,15 +124,15 @@
 			children = (
 				F3CA34A52743C65600F4F5A8 /* CheckData */,
 				F3CA34AB2743C65600F4F5A8 /* Config */,
+				F3CA34D42743C77400F4F5A8 /* General */,
+				2CB963FD266742A5002509FC /* Preview Content */,
 				F3CA34902743C65600F4F5A8 /* Register */,
 				F3CA34B02743C65600F4F5A8 /* UpdateInfo */,
-				F3CA34D42743C77400F4F5A8 /* General */,
 				2CB963F5266742A3002509FC /* AppDelegate.swift */,
-				2CB963F7266742A3002509FC /* SceneDelegate.swift */,
 				2CB963FB266742A5002509FC /* Assets.xcassets */,
-				2CB96400266742A5002509FC /* LaunchScreen.storyboard */,
 				2CB96403266742A5002509FC /* Info.plist */,
-				2CB963FD266742A5002509FC /* Preview Content */,
+				2CB96400266742A5002509FC /* LaunchScreen.storyboard */,
+				2CB963F7266742A3002509FC /* SceneDelegate.swift */,
 			);
 			path = Tomato_Automatic_Aggregation;
 			sourceTree = "<group>";
@@ -148,10 +148,10 @@
 		F3CA34902743C65600F4F5A8 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34912743C65600F4F5A8 /* methods */,
 				F3CA34952743C65600F4F5A8 /* Objects */,
 				F3CA349A2743C65600F4F5A8 /* View */,
 				F3CA34A32743C65600F4F5A8 /* data */,
+				F3CA34912743C65600F4F5A8 /* methods */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -159,9 +159,9 @@
 		F3CA34912743C65600F4F5A8 /* methods */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34922743C65600F4F5A8 /* ScaleDatafetcher.swift */,
-				F3CA34932743C65600F4F5A8 /* LoadingPeriod.swift */,
 				F3CA34942743C65600F4F5A8 /* CalculateCheckDigit.swift */,
+				F3CA34932743C65600F4F5A8 /* LoadingPeriod.swift */,
+				F3CA34922743C65600F4F5A8 /* ScaleDatafetcher.swift */,
 			);
 			path = methods;
 			sourceTree = "<group>";
@@ -169,10 +169,10 @@
 		F3CA34952743C65600F4F5A8 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				F3CA34992743C65600F4F5A8 /* Scale_Data.swift */,
 				F3CA34962743C65600F4F5A8 /* SelectedScaleData.swift */,
 				F3CA34972743C65600F4F5A8 /* VarietiesDataBase.swift */,
 				F3CA34982743C65600F4F5A8 /* Variety.swift */,
-				F3CA34992743C65600F4F5A8 /* Scale_Data.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -180,12 +180,12 @@
 		F3CA349A2743C65600F4F5A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA349D2743C65600F4F5A8 /* InputVarietyView.swift */,
 				F3CA349F2743C65600F4F5A8 /* TabView */,
 				F3CA349C2743C65600F4F5A8 /* CheckVarietyView.swift */,
+				F3CA349E2743C65600F4F5A8 /* HealthPlanetButtonView.swift */,
+				F3CA349D2743C65600F4F5A8 /* InputVarietyView.swift */,
 				F3CA34A22743C65600F4F5A8 /* ScaleDataListView.swift */,
 				F3CA349B2743C65600F4F5A8 /* SendDataToServerView.swift */,
-				F3CA349E2743C65600F4F5A8 /* HealthPlanetButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,8 +193,8 @@
 		F3CA349F2743C65600F4F5A8 /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34A02743C65600F4F5A8 /* InputByListTabView.swift */,
 				F3CA34A12743C65600F4F5A8 /* InputByBarcodeReaderTabView.swift */,
+				F3CA34A02743C65600F4F5A8 /* InputByListTabView.swift */,
 			);
 			path = TabView;
 			sourceTree = "<group>";
@@ -287,8 +287,8 @@
 		F3CA34B52743C65600F4F5A8 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34B62743C65600F4F5A8 /* 2021_11_09.txt */,
 				F3CA34B72743C65600F4F5A8 /* 2021_11_02.txt */,
+				F3CA34B62743C65600F4F5A8 /* 2021_11_09.txt */,
 				F3CA34F82745EC7700F4F5A8 /* 2021_11_18.txt */,
 			);
 			path = data;
@@ -297,20 +297,20 @@
 		F3CA34D42743C77400F4F5A8 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34D52743C77400F4F5A8 /* methods */,
 				F3CA34D82743C77400F4F5A8 /* Objects */,
-				F3CA34DA2743C77400F4F5A8 /* extentions */,
 				F3CA34DE2743C77400F4F5A8 /* View */,
+				F3CA34DA2743C77400F4F5A8 /* extentions */,
+				F3CA34D52743C77400F4F5A8 /* methods */,
 			);
 			name = General;
-			path = Tomato_Automatic_Aggregation/General;
-			sourceTree = SOURCE_ROOT;
+			path = General;
+			sourceTree = "<group>";
 		};
 		F3CA34D52743C77400F4F5A8 /* methods */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34D62743C77400F4F5A8 /* Times.swift */,
 				F3CA34D72743C77400F4F5A8 /* DataManagement.swift */,
+				F3CA34D62743C77400F4F5A8 /* Times.swift */,
 			);
 			path = methods;
 			sourceTree = "<group>";
@@ -326,9 +326,9 @@
 		F3CA34DA2743C77400F4F5A8 /* extentions */ = {
 			isa = PBXGroup;
 			children = (
+				F3CA34DD2743C77400F4F5A8 /* Color.swift */,
 				F3CA34DB2743C77400F4F5A8 /* ExtentionWeight.swift */,
 				F3CA34DC2743C77400F4F5A8 /* GeneralizationJSONDecode.swift */,
-				F3CA34DD2743C77400F4F5A8 /* Color.swift */,
 			);
 			path = extentions;
 			sourceTree = "<group>";
@@ -336,9 +336,9 @@
 		F3CA34DE2743C77400F4F5A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F3CA34DF2743C77400F4F5A8 /* TextFieldAlert.swift */,
-				F3CA34E02743C77400F4F5A8 /* CustomTextField.swift */,
 				F3CA34E12743C77400F4F5A8 /* ContentView.swift */,
+				F3CA34E02743C77400F4F5A8 /* CustomTextField.swift */,
+				F3CA34DF2743C77400F4F5A8 /* TextFieldAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,8 +371,6 @@
 			dependencies = (
 			);
 			name = Tomato_Automatic_Aggregation;
-			packageProductDependencies = (
-			);
 			productName = Tomato_Automatic_Aggregation;
 			productReference = 2CB963F2266742A3002509FC /* Tomato_Automatic_Aggregation.app */;
 			productType = "com.apple.product-type.application";
@@ -401,8 +399,6 @@
 				Base,
 			);
 			mainGroup = 2CB963E9266742A3002509FC;
-			packageReferences = (
-			);
 			productRefGroup = 2CB963F3266742A3002509FC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -498,6 +494,7 @@
 				2CB96401266742A5002509FC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -39,7 +39,6 @@
 		F3CA34E22743C77400F4F5A8 /* Times.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34D62743C77400F4F5A8 /* Times.swift */; };
 		F3CA34E32743C77400F4F5A8 /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34D72743C77400F4F5A8 /* DataManagement.swift */; };
 		F3CA34E42743C77400F4F5A8 /* flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34D92743C77400F4F5A8 /* flag.swift */; };
-		F3CA34E52743C77400F4F5A8 /* ExtentionWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34DB2743C77400F4F5A8 /* ExtentionWeight.swift */; };
 		F3CA34E62743C77400F4F5A8 /* GeneralizationJSONDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34DC2743C77400F4F5A8 /* GeneralizationJSONDecode.swift */; };
 		F3CA34E72743C77400F4F5A8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34DD2743C77400F4F5A8 /* Color.swift */; };
 		F3CA34E82743C77400F4F5A8 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34DF2743C77400F4F5A8 /* TextFieldAlert.swift */; };
@@ -83,7 +82,6 @@
 		F3CA34D62743C77400F4F5A8 /* Times.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Times.swift; sourceTree = "<group>"; };
 		F3CA34D72743C77400F4F5A8 /* DataManagement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
 		F3CA34D92743C77400F4F5A8 /* flag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flag.swift; sourceTree = "<group>"; };
-		F3CA34DB2743C77400F4F5A8 /* ExtentionWeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtentionWeight.swift; sourceTree = "<group>"; };
 		F3CA34DC2743C77400F4F5A8 /* GeneralizationJSONDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralizationJSONDecode.swift; sourceTree = "<group>"; };
 		F3CA34DD2743C77400F4F5A8 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F3CA34DF2743C77400F4F5A8 /* TextFieldAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 				F3CA34DA2743C77400F4F5A8 /* extentions */,
 				F3CA34D52743C77400F4F5A8 /* methods */,
 			);
-			name = General;
 			path = General;
 			sourceTree = "<group>";
 		};
@@ -327,7 +324,6 @@
 			isa = PBXGroup;
 			children = (
 				F3CA34DD2743C77400F4F5A8 /* Color.swift */,
-				F3CA34DB2743C77400F4F5A8 /* ExtentionWeight.swift */,
 				F3CA34DC2743C77400F4F5A8 /* GeneralizationJSONDecode.swift */,
 			);
 			path = extentions;
@@ -455,7 +451,6 @@
 				F3CA34BB2743C65600F4F5A8 /* SelectedScaleData.swift in Sources */,
 				F3CA34EA2743C77400F4F5A8 /* ContentView.swift in Sources */,
 				F3CA34BC2743C65600F4F5A8 /* VarietiesDataBase.swift in Sources */,
-				F3CA34E52743C77400F4F5A8 /* ExtentionWeight.swift in Sources */,
 				F3CA34C92743C65600F4F5A8 /* GetCheckDataView.swift in Sources */,
 				2CB963F6266742A3002509FC /* AppDelegate.swift in Sources */,
 				F3CA34BA2743C65600F4F5A8 /* CalculateCheckDigit.swift in Sources */,

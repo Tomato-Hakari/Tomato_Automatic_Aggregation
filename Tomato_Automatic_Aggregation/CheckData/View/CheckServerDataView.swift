@@ -13,10 +13,8 @@ struct CheckServerDataView: View {
     @ObservedObject var reloader = Reloader()
     // シートが開いている状態
     @Binding var isPresented: Bool
-
-     var TomatoData: [ServerData]
-
-    
+    // GetCheckDataView.swiftから値が渡される
+    var TomatoData: [ServerData]
     
     var body: some View {
         VStack{
@@ -39,6 +37,7 @@ struct CheckServerDataView: View {
                 isPresented = false
             }
         )
+        // navigationView標準の戻るボタンを非表示にする
         .navigationBarBackButtonHidden(true)
         .onAppear{
             reloader.start()
@@ -70,6 +69,7 @@ struct Rows: View {
 
 struct DetailDataHeader: View {
     let TomatoData: ServerData
+    // 詳細情報を表示するかどうか
     @State var isExpanded: Bool = false
     var body: some View {
         VStack(alignment: .leading) {
@@ -86,6 +86,7 @@ struct DetailDataHeader: View {
                         .fontWeight(.bold)
                         .padding(5.0)
                     if self.isExpanded {
+                        // isExpandedがtrueのとき表示される
                         Rows(TomatoData: TomatoData)
                     }
                 }.font(.system(size: 20))

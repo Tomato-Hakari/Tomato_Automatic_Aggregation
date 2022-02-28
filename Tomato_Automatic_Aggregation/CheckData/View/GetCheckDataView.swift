@@ -11,11 +11,11 @@ import Combine
 struct GetCheckDataView: View {
     // シートが開いている状態
     @Binding var isPresented: Bool
-    
+    // レスポンスされた文字列を格納する変数
     @State var result: String = ""
-    
+    // データベースのデータを格納する配列
     @State var TomatoData = [ServerData]()
-    
+    // TomatoData配列にデータが入っているかどうか
     @State var isTomatoDataIn: Bool = false
     /// データ読み込み処理
     func loadData() {
@@ -59,6 +59,7 @@ struct GetCheckDataView: View {
         NavigationView{
             ZStack{
                 VStack{
+                    // isTomatoDataInがtrueになったらページ遷移
                     NavigationLink(destination: CheckServerDataView(isPresented: $isPresented, TomatoData: TomatoData), isActive: $isTomatoDataIn) {
                         EmptyView()
                     }
@@ -75,6 +76,7 @@ struct GetCheckDataView: View {
                     }
                 }
                 .onAppear {
+                    // ページが開いたときの処理
                     DispatchQueue.main.async {
                         print("reload.onappear")
                         TomatoData.removeAll()

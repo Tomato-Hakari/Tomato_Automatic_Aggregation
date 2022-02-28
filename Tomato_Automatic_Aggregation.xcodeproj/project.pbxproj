@@ -297,7 +297,7 @@
 			children = (
 				F3CA34D82743C77400F4F5A8 /* Objects */,
 				F3CA34DE2743C77400F4F5A8 /* View */,
-				F3CA34DA2743C77400F4F5A8 /* extentions */,
+				F3CA34DA2743C77400F4F5A8 /* extensions */,
 				F3CA34D52743C77400F4F5A8 /* methods */,
 			);
 			path = General;
@@ -320,13 +320,13 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
-		F3CA34DA2743C77400F4F5A8 /* extentions */ = {
+		F3CA34DA2743C77400F4F5A8 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
 				F3CA34DD2743C77400F4F5A8 /* Color.swift */,
 				F3CA34DC2743C77400F4F5A8 /* GeneralizationJSONDecode.swift */,
 			);
-			path = extentions;
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		F3CA34DE2743C77400F4F5A8 /* View */ = {

@@ -103,7 +103,7 @@ class DataManagement {
     
     // PHPスクリプトのURLの先頭を返す
     class func GeneratePHPURLHead() -> String {
-        return "http://www.cyanpuma31.sakura.ne.jp/accessDB/\(flag.currentmode)"
+        return "https://teramotoken.sakura.ne.jp/accessDB/\(flag.currentmode)"
     }
     
     // String=>Date変換

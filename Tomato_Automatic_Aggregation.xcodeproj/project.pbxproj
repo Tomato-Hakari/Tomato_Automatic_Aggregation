@@ -12,6 +12,7 @@
 		2CB963FC266742A5002509FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB963FB266742A5002509FC /* Assets.xcassets */; };
 		2CB963FF266742A5002509FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB963FE266742A5002509FC /* Preview Assets.xcassets */; };
 		2CB96402266742A5002509FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB96400266742A5002509FC /* LaunchScreen.storyboard */; };
+		F32D8D2E27E18A3E0004BD4A /* 2022_03_16.txt in Resources */ = {isa = PBXBuildFile; fileRef = F32D8D2D27E18A3E0004BD4A /* 2022_03_16.txt */; };
 		F3CA34B82743C65600F4F5A8 /* ScaleDatafetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34922743C65600F4F5A8 /* ScaleDatafetcher.swift */; };
 		F3CA34B92743C65600F4F5A8 /* LoadingPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34932743C65600F4F5A8 /* LoadingPeriod.swift */; };
 		F3CA34BA2743C65600F4F5A8 /* CalculateCheckDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CA34942743C65600F4F5A8 /* CalculateCheckDigit.swift */; };
@@ -55,6 +56,7 @@
 		2CB963FE266742A5002509FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CB96401266742A5002509FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CB96403266742A5002509FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F32D8D2D27E18A3E0004BD4A /* 2022_03_16.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2022_03_16.txt; sourceTree = "<group>"; };
 		F3CA34922743C65600F4F5A8 /* ScaleDatafetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleDatafetcher.swift; sourceTree = "<group>"; };
 		F3CA34932743C65600F4F5A8 /* LoadingPeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingPeriod.swift; sourceTree = "<group>"; };
 		F3CA34942743C65600F4F5A8 /* CalculateCheckDigit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateCheckDigit.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				F3CA34B72743C65600F4F5A8 /* 2021_11_02.txt */,
 				F3CA34B62743C65600F4F5A8 /* 2021_11_09.txt */,
 				F3CA34F82745EC7700F4F5A8 /* 2021_11_18.txt */,
+				F32D8D2D27E18A3E0004BD4A /* 2022_03_16.txt */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32D8D2E27E18A3E0004BD4A /* 2022_03_16.txt in Resources */,
 				F3CA34CB2743C65600F4F5A8 /* Developer.json in Resources */,
 				2CB96402266742A5002509FC /* LaunchScreen.storyboard in Resources */,
 				F3CA34F92745EC7700F4F5A8 /* 2021_11_18.txt in Resources */,

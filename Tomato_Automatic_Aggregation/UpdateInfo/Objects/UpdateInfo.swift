@@ -45,7 +45,8 @@ extension UpdateInfo {
         return [
             UpdateInfo(fileName: "2021_11_02", dateStr: "2021_11_02", dateformat: "yyyy_MM_dd"),
             UpdateInfo(fileName: "2021_11_09", dateStr: "2021_11_09", dateformat: "yyyy_MM_dd"),
-            UpdateInfo(fileName: "2021_11_18", dateStr: "2021_11_18", dateformat: "yyyy_MM_dd")
+            UpdateInfo(fileName: "2021_11_18", dateStr: "2021_11_18", dateformat: "yyyy_MM_dd"),
+            UpdateInfo(fileName: "2022_03_16", dateStr: "2022_03_16", dateformat: "yyyy_MM_dd")
         ]
     }
 }

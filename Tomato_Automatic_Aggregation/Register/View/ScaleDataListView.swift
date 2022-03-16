@@ -12,19 +12,26 @@ struct ScaleDataListView: View {
     // シートが開いている状態
     @Binding var isPresented: Bool
     
+    // 表示期間
     let periods = ["24時間","1ヶ月","全期間"]
     
+    // 選択中の表示期間(数値は配列periodsの要素番号に対応)
     @State var selectedPeriod: Int = 0;
     
+    // 読み込み中の"..."マークを定義
     @ObservedObject var period = LoadingPeriod()
     
+    // ボタン入力を受け付けるかどうか
     @State var isButtonActive:Bool = false
     
+    // APIから受け取った重量データ
     @ObservedObject var scaledata = ScaleDataFetcher()
     
+    // 選択された重量データ
     @State var selectedScaleData: [SelectedScaleData] = []
     
-    @State var hiddendatas: Int = 0;
+    // 表示されていないデータ数
+    @State var hiddendata: Int = 0;
     
     // Pickerで選択された品種
     @State var selectedNumbers = Set<Int>()
@@ -81,7 +88,7 @@ struct ScaleDataListView: View {
                         .multilineTextAlignment(.leading)
                         .frame(width: 300.0)
                     }
-                } else if hiddendatas == scaledata.scale_datum.count {
+                } else if hiddendata == scaledata.scale_datum.count {
                     Text("データがありません")
                         .font(.system(size: 50))
                         .multilineTextAlignment(.leading)
@@ -93,7 +100,7 @@ struct ScaleDataListView: View {
         .onAppear {
             scaledata.deleteAll()
             scaledata.load()
-            hiddendatas = 0
+            hiddendata = 0
         }
         .navigationBarTitle("収量選択")
         .toolbar{

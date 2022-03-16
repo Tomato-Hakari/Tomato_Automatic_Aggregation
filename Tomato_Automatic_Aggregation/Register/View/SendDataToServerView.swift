@@ -30,7 +30,7 @@ struct SendDataToServerView: View {
         let EncodedRootstock = Variety.InputVarietyRootstockName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let EncodedRemarks = Variety.InputVarietyRemarks.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         
-        var PHPurl =  "\(DataManagement.GeneratePHPURLHead())/upload.php?varietyID=\(Variety.InputVarietyID)"
+        var PHPurl =  "\(DataManagement.GeneratePHPURLHead())accessDB/\(flag.currentmode)/upload.php?varietyID=\(Variety.InputVarietyID)"
         
         if !Variety.InputVarietyScionName.isEmpty {
             PHPurl += "&scion=\(EncodedScion!)"

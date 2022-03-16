@@ -8,6 +8,7 @@
 import Foundation
 
 class UpdateInfo: ObservableObject, Identifiable {
+    // 説明文
     @Published var info: String = ""
     private let fileName: String
     private let date: Date

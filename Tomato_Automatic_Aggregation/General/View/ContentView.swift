@@ -57,13 +57,16 @@ struct ContentView: View {
                 HStack{
                     Button(action: {
                         flag.isSuccessedSendings = false
-                        isShowCheckView = true
+                        UIApplication.shared.open(URL(string: DataManagement.GeneratePHPURLHead())!)
                     }) {
-                        Text("データ確認")
-                            .frame(width: 300, height: 300)
-                            .foregroundColor(.black)
+                        VStack{
+                            Text("データ確認")
                             .font(.system(size: 50))
                                             .font(.largeTitle)
+                            Text("※ブラウザが開きます")
+                        }
+                        .frame(width: 300, height: 300)
+                        .foregroundColor(.black)
                     }
                     .sheet(isPresented: $isShowCheckView) {
                         GetCheckDataView(isPresented: self.$isShowCheckView)

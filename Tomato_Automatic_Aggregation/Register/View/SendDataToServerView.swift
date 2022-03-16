@@ -11,19 +11,26 @@ struct SendDataToServerView: View {
     // シートが開いている状態
     @Binding var isPresented: Bool
     
+    // ScaleDataListView.swiftから受け取る重量データ
     @State var selectedScaleData: [SelectedScaleData]
+    
+    // 重量の総和
     @State var weightsum: Float = 0.0
     
+    // コンテナの数("1"を1000個定義)
     @State var containers:[Int] = Array(repeating: 1, count:1000)
     
+    // サーバから受け取るデータ
     @State private var result = ""
     
+    // これより下の変数はあって無いようなもの()
     @State private var isSuccess: Bool = false
     @State private var successed: [Bool] = []
     @State private var erroredIndex: [Int] = []
     @State private var isError: Bool = false
     @State private var ShowingAlert: Bool = false
     
+    // データベースにデータを送信する関数
     func OpenPHP(scaleDate: String, yield: String) -> Bool {
         let EncodedScion = Variety.InputVarietyScionName.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
         let EncodedScionShort = Variety.InputVarietyScionShort.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)

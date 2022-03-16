@@ -166,9 +166,14 @@ class DataManagement {
         }
     }
     
+    // コンテナひとつ分の重量を返す
+    class func ContainerWeight() -> Float {
+        return 1.2
+    }
+    
     // String型の重量データからコンテナの重量を減じてString型で返す
     class func CalculateYield(weightString: String, containers: Float) -> String {
-        let containerWeight: Float = 1.2 * containers
+        let containerWeight: Float = self.ContainerWeight() * containers
         let weight = Float(weightString)!
         
         let yield: Float = round((weight - containerWeight) * 100) / 100

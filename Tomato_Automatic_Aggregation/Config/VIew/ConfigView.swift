@@ -20,13 +20,19 @@ struct ConfigView: View {
     // シートが開いている状態
     @Binding var isPresented: Bool
     
+    // 現在の状態(flag.swiftのcurrentModeNumと同じルール)
     @State var selectedMode: Int? = 0
     
+    // 開発者モードへ移行するためのフラグ
     @State var toDeveloperLogin: Bool = false
     
+    // ログイン失敗のアラートを出すためのフラグ
     @State var isLoginError: Bool = false
     
+    // 入力されたログインIDとパスワードハッシュを格納する構造体変数
     @State var login = DeveloperLogin()
+    
+    // Developer.jsonから開発者情報を取得
     let Developer: DeveloperDB = Bundle.main.decodeJSON(file: "Developer.json")
     
     var body: some View {
@@ -79,6 +85,7 @@ struct ConfigView: View {
             leftButtonTitle: "キャンセル",
             leftButtonAction: {
                 self.selectedMode = 0
+                self.toDeveloperLogin = false
                 UIApplication.shared.endEditing()
             },
             rightButtonTitle: "ログイン",
